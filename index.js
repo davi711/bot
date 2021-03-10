@@ -57,14 +57,14 @@ const instagram = 'http://www.instagram.com/';
 const aktif = '08:00 - 22:00';
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
-            + 'FN:Dark\n' // Nama kamu
+            + 'FN:Davi Criador\n' // Nama kamu
             + 'ORG:Lexa;\n' // Nama bot
-            + 'TEL;type=CELL;type=VOICE;waid=5531988514445:+55 3198851-4445\n' //Nomor whatsapp kamu
+            + 'TEL;type=CELL;type=VOICE;waid=553188514445:+55 318851-4445\n' //Nomor whatsapp kamu
             + 'END:VCARD'
 prefix = '.'
 blocked = []
 limitawal = '999999999'
-cr = '*Dark*'
+cr = 'É o Davi não é mesmo?'
 
 /*********** LOAD FILE ***********/
 const _leveling = JSON.parse(fs.readFileSync('./database/group/leveling.json'))
@@ -3086,7 +3086,7 @@ break
 					break
 			    case 'owner':
                     client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-                    client.sendMessage(from, 'Ctt do meu dono ai, pfv n flode o chat',MessageType.text, { quoted: mek} )
+                    client.sendMessage(from, 'CTT DO MEU CRIADOR AI',MessageType.text, { quoted: mek} )
                     break
                 case 'fitnah':	
 				case 'fake':          
