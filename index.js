@@ -61,7 +61,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'ORG:Lexa;\n' // Nama bot
             + 'TEL;type=CELL;type=VOICE;waid=5522996215481:+55 2299621-5481\n' //Nomor whatsapp kamu
             + 'END:VCARD'
-prefix = '.','!','#'
+prefix = '.'
 blocked = []
 limitawal = '999999999'
 cr = '*Dark*'
@@ -224,7 +224,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Olá @${num.split('@')[0]}\nBem vindo ao grupo *${mdata.subject}*\n\nEspero que goste do grupo ❤️`
+				teks = `Olá @${num.split('@')[0]}\nBem vindo ao grupo ${mdata.subject}\n\nEspero que goste do grupo ❤️`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -235,7 +235,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Tchau @${num.split('@')[0]} Ja foi tarde 😂👋`
+				teks = `SAIU @${num.split('@')[0]} PQ É HÉTERO`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -693,9 +693,9 @@ if (text.includes("placa"))
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
-				if (messagesC.includes("oii")){
+				if (messagesC.includes("oi")){
 			client.updatePresence(from, Presence.composing)
-			tujuh = fs.readFileSync('./assets/ola.mp3');
+			tujuh = fs.readFileSync('./assets/oi.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
@@ -1851,7 +1851,7 @@ tujuh = fs.readFileSync('./assets/sound7.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'ola':
-tujuh = fs.readFileSync('./assets/ola.mp3');
+tujuh = fs.readFileSync('./assets/oi.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'bv':
@@ -2005,7 +2005,8 @@ break
 					anu = await fetchJson(`https://arugaz.herokuapp.com/api/howgay`, {method: 'get'})
 					reply('De acordo com o percentual gay:\n\n'+anu.desc+anu.persen)
 					break
-			  case 'next':               
+			  case 'next':
+               
                 if (isGroup) return  reply( 'NÃO PODE ESTAR EM GRUPO KAK')
                 await reply('Ache um companheiro >_<')
                 await reply(`wa.me/${anug}`)
@@ -2235,13 +2236,13 @@ break
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (args.length < 1) return reply('digite 1 para ativar ')
-					if (Number(args[0]) === 1) {
+					if (Number(args[0]) === on) {
 						if (isAntiLink) return reply('o anti-link está ativo')
 						antilink.push(from)
 						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
 						reply('Grupo anti-link ativado com sucesso neste grupo ✔️')
 						client.sendMessage(from,`Atencao a todos os membros ativos deste grupo anti-link. ee você enviar um link de grupo, voce sera expulso daqui  grupo`, text)
-					} else if (Number(args[0]) === 0) {
+					} else if (Number(args[0]) === off) {
 						if (!isantilink) return reply('O modo de grupo anti-link foi desabilitado ')
 						var ini = anti.clientOf(from)
 						antilink.splice(ini, 1)
