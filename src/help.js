@@ -212,6 +212,8 @@ const help = (prefix) => {
 ┃✌🏾 ${prefix}msc5
 ┃✌🏾 CAVALGADA SALIENTE
 ┃✌🏾 ${prefix}msc6
+┃✌🏾 TETO-FAZER DINHEIRO
+┃✌🏾 ${prefix}msc7
 ┃
 ┣━━🦊「 OUTROS /2 」🦊━━
 ┃
