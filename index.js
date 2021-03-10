@@ -1832,6 +1832,30 @@ if (text.includes("placa"))
 					client.sendMessage(from, nye, image, { caption: 'boruto!!', quoted: mek })
 					await limitAdd(sender)
 					break 
+				case 'msc1':
+                    tujuh = fs.readFileSync('./assets/casadoluan.mp3');
+                    client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                    break 
+				case 'msc2':
+                    tujuh = fs.readFileSync('./assets/piscaparafal.mp3');
+                    client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                    break 
+				case 'msc3':
+                    tujuh = fs.readFileSync('./assets/traprocinha.mp3');
+                    client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                    break 
+				case 'msc4':
+                    tujuh = fs.readFileSync('./assets/uniaoflasco.mp3');
+                    client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                    break 
+				case 'msc5':
+                    tujuh = fs.readFileSync('./assets/uniaoflascoofc.mp3');
+                    client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                    break 
+				case 'msc6':
+                    tujuh = fs.readFileSync('./assets/cavaquinho.mp3');
+                    client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                    break 
 				case 'animecry':
 					cry = getRandom('.gif')
 					rano = getRandom('.webp')
