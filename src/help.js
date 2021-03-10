@@ -200,6 +200,9 @@ const help = (prefix) => {
 ┃✌🏾 ${prefix}glub
 ┃
 ┣━━🦊「 COMANDOS DE MUSICA 」🦊━━
+┃
+┃SUGESTÕES DE MUSICA CHAME O CRIADOR
+┃
 ┃✌🏾 CASA DO LUAN
 ┃✌🏾 ${prefix}msc1
 ┃✌🏾 PISCA A XERECA QUANDO VER O PARAFAL(Remix)
