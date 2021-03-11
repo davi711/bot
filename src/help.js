@@ -129,6 +129,8 @@ const help = (prefix) => {
 ┃
 ┣━━🦊「 GRUPO 」🦊━━
 ┃
+┃🤬 ${prefix}fechargp
+┃🤬 ${prefix}abrirgp
 ┃🤬 ${prefix}banir
 ┃🤬 ${prefix}leveling [on/off]
 ┃🤬 ${prefix}level
