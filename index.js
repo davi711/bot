@@ -1854,7 +1854,15 @@ if (text.includes("placa"))
 				case 'msc7':
                     tujuh = fs.readFileSync('./assets/fazerdinheiro.mp3');
                     client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                    break  
+                    break 
+				case 'gemido1':
+                    tujuh = fs.readFileSync('./assets/gemido1.mp3');
+                    client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                    break 
+				case 'gemido2':
+                    tujuh = fs.readFileSync('./assets/gemido2.mp3');
+                    client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                    break 
 				case 'animecry':
 					cry = getRandom('.gif')
 					rano = getRandom('.webp')
