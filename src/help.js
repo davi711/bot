@@ -129,10 +129,11 @@ const help = (prefix) => {
 ┃
 ┣━━🦊「 GRUPO 」🦊━━
 ┃
+┃🤬 ${prefix}notify [ texto ]
 ┃🤬 ${prefix}fechargp
 ┃🤬 ${prefix}abrirgp
 ┃🤬 ${prefix}banir
-┃🤬 ${prefix}leveling [on/off]
+┃🤬 ${prefix}leveling [ on/off ]
 ┃🤬 ${prefix}level
 ┃🤬 ${prefix}add
 ┃🤬 ${prefix}promover
@@ -143,7 +144,7 @@ const help = (prefix) => {
 ┃🤬 ${prefix}marcar
 ┃🤬 ${prefix}marcar2
 ┃🤬 ${prefix}marcar3
-┃🤬 ${prefix}bemvindo [1/0]
+┃🤬 ${prefix}bemvindo [ 1/0 ]
 ┃🤬 ${prefix}grupoinfo
 ┃🤬 ${prefix}bomdia
 ┃🤬 ${prefix}boatarde
