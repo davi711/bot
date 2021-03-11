@@ -2714,8 +2714,8 @@ break
 					text: `GRUPO ABERTO PELO ADMINISTRADOR @${sender.split("@")[0]} TODOS OS PARTICIPANTES PODE ENVIAR MENSAGENS`,
 					contextInfo: { mentionedJid: [sender] }
 					}
-					client.groupSettingChange (from, GroupSettingChange.messageSend, false);
-					reply(close)
+					client.groupSettingChange (from, GroupSettingChange.messageSend, false)
+					client.sendMessage(from, open, text, {quoted: mek})
 					break
 				case 'setppbot':
 				client.updatePresence(from, Presence.composing) 
