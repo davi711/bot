@@ -2714,8 +2714,9 @@ break
 					text: `GRUPO ABERTO PELO ADMINISTRADOR @${sender.split("@")[0]} TODOS OS PARTICIPANTES PODE ENVIAR MENSAGENS`,
 					contextInfo: { mentionedJid: [sender] }
 					}
-					client.groupSettingChange (from, GroupSettingChange.messageSend, false)
-					client.sendMessa
+					client.groupSettingChange (from, GroupSettingChange.messageSend, false);
+					reply(close)
+					break
 				case 'setppbot':
 				client.updatePresence(from, Presence.composing) 
 				if (!isQuotedImage) return reply(`Envie fotos com legendas ${prefix}setbotpp ou tags de imagem que já foram enviadas`)
