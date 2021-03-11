@@ -203,6 +203,8 @@ const help = (prefix) => {
 ┃🤬 ${prefix}onich
 ┃🤬 ${prefix}beat1
 ┃🤬 ${prefix}glub
+┃🤬 ${prefix}gemido1
+┃🤬 ${prefix}gemido2
 ┃
 ┣━━🦊「 COMANDOS DE MUSICA 」🦊━━
 ┃
