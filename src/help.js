@@ -218,8 +218,10 @@ const help = (prefix) => {
 ┃🤬 ${prefix}msc5
 ┃🤬 CAVALGADA SALIENTE
 ┃🤬 ${prefix}msc6
-┃🤬 TETO-FAZER DINHEIRO
+┃🤬 TETO - FAZER DINHEIRO
 ┃🤬 ${prefix}msc7
+┃🤬 KREW$ - ZIP
+┃🤬 ${prefix}msc8
 ┃
 ┣━━🦊「 OUTROS /2 」🦊━━
 ┃
