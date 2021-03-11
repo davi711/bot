@@ -3724,7 +3724,7 @@ break
 					}
 					reply('Excluido todos os chats com sucesso :)')
 					break
-				case 'bc':
+				case 'tm':
 					if (!isOwner) return reply('Quem é Você, você não é meu dono 😂?')
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
@@ -3732,14 +3732,32 @@ break
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						buff = await client.downloadMediaMessage(encmedia)
 						for (let _ of anu) {
-							client.sendMessage(_.jid, buff, image, {caption: `[ TRANSMIÇÃO DE AVISO ]\n\n${body.slice(4)}`})
+							client.sendMessage(_.jid, buff, image, {caption: `[ TRANSMISSÃO DE AVISO ]\n\n${body.slice(4)}`})
 						}
 						reply('Transmissão enviada com sucesso')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `[ TRANSMISSÃO DE AVISO ]\n\n${body.slice(4)}`)
+							sendMess(_.jid, `「 TRANSMISSÃO DE AVISO 」\n\n${body.slice(4)}`)
 						}
 						reply('Transmissão enviada com sucesso')
+					}
+					break
+				case 'tmgp':
+					client.updatePresence(from, Presence.composing) 
+					if (!isOwner) return reply(mess.only.ownerB)
+					if (args.length < 1) return reply('.......')
+					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+						buff = await client.downloadMediaMessage(encmedia)
+						for (let _ of groupMembers) {
+							client.sendMessage(_.jid, buff, image, {caption: `*「 BC GROUP 」*\n*Group* : ${groupName}\n\n${body.slice(6)}`})
+						}
+						reply('')
+					} else {
+						for (let _ of groupMembers) {
+							sendMess(_.jid, `「 TRANSMISSÃO DE AVISO」\nGRUPO: ${groupName}\n\n${body.slice(6)}`)
+						}
+						reply('Grupo de transmissão de sucesso')
 					}
 					break
         case 'promover':
