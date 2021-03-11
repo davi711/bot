@@ -2,7 +2,6 @@ const help1 = (prefix) => {
 
 	return `
 ┣━━━━°❀ ❬ *CRIAR* ❭ ❀°━━━━┓
-oiii ${pushname2}
 ┃
 ┣⊱❥ *xd*
 ┣⊱❥ *pinterest*

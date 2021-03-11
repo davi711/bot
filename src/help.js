@@ -2,7 +2,6 @@ const help = (prefix) => {
 	return `
 ┏━━🦊「 INFO 」🦊━━
 ┃
-┃oii ${pushname2} não floode comandos
 ┣➜ DAVI BOT
 ┣➜ 1.0
 ┣➜ DONO: DAVI
