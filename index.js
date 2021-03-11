@@ -690,7 +690,7 @@ if (text.includes("placa"))
 	
 			if (messagesC.includes("bah")){
 			client.updatePresence(from, Presence.composing)
-			tujuh = fs.readFileSync('./assets/fdp.mp3');
+			tujuh = fs.readFileSync('./assets/bah.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
@@ -3813,7 +3813,7 @@ break
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('A marca-alvo que você quer chutar!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = 'Alvo removido com sucesso :\n'
+						teks = 'AIII QUE BANZINN DLC\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
