@@ -3934,7 +3934,7 @@ break
 						reply('Transmissão enviada')
 					}
 					break
-				case 'hidetag2':
+				case 'notify':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isadminbot) return reply('Quem é Você?')
 					var value = body.slice(9)
