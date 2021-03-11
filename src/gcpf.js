@@ -303,8 +303,6 @@ const gcpf = () => {
 992.717.975-82
 874.732.303-52
 549.647.418-34
-
-Dark domina ta? 🐊🚩
 `
 }
 exports.gcpf = gcpf
