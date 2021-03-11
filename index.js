@@ -292,7 +292,7 @@ async function starts() {
 					mod: '[❗] ESTE PEDIDO É ESPECÍFICO PARA USUARIO MOD DARK BOT*',
 					benned: 'VOCÊ ESTÁ BANIDO CONTATE O DAVI PARA SER DESBANIDO',
 					ownerG: 'ESTE COMANDO SÓ PODE SER USADO PELO DAVI',
-					ownerB: 'ESTE COMANDO SÓ PODE SER USADO PELO DAVI',
+					ownerB: '🤬 ESTE COMANDO SÓ PODE SER USADO PELO DAVI 🤬',
 					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmã. Você não está registrado como amigo de Dark. Registre-se para fazer amizade com o bot Dark por meio, \n\nCommand : ${prefix}daftar nama|idade\nExemplo : ${prefix}daftar Dark|17\n\n──「 Dark BOT 」──`,
 					admin: '[❗] Este comando só pode ser usado por administradores de grupo! ❌',
 					Badmin: ' [❗] Este comando só pode ser usado quando o bot se torna administrador! ❌',
@@ -3721,7 +3721,7 @@ break
 					reply('Excluido todos os chats com sucesso :)')
 					break
 				case 'tm':
-					if (!isOwner) return reply('Quem é Você, você não é meu dono 😂?')
+					if (!isOwner) return reply('🤬 ESTE COMANDO SÓ PODE SER USADO PELO DAVI 🤬')
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
