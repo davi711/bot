@@ -1924,14 +1924,6 @@ break
 					client.sendMessage(from, 'Questão : *'+hobby+'*\n\nResponda : '+ by, text, { quoted: mek })
 					await limitAdd(sender)
 					break
-           case 'gay1':
-
-					gay = body.slice(13)
-		   anu = await fetchJson(`https://arugaz.herokuapp.com/api/howgay`, {method: 'get'})
-		   hasil = `Veja os dados do Gay ${gay}\n\n\nPercentagem Gay : ${anu.persen}%\nAlerta!!! : gay, mas não cego`
-		   reply(hasil)
-		   await limitAdd(sender)
-					break
                 case 'nangis':
 
 					ranp = getRandom('.gif')
@@ -2110,11 +2102,11 @@ break
 					}, 0) // 1000 = 1s,
 					break
 		        case 'gay':		
-	            	if (args.length < 1) return reply('marque seus amigos!')
+	            	if (args.length < 1) return reply('MARCA A BIXA KKKK')
 					rate = body.slice(1)
 					const ti =['4','9','17','28','34','48','59','62','74','83','97','100','29','94','75','82','41','39']
 					const kl = ti[Math.floor(Math.random() * ti.length)]
-					client.sendMessage(from, 'Como você é gay: *'+rate+'*\n\nSua porcentagem gay : '+ kl+'%', text, { quoted: mek })
+					client.sendMessage(from, 'TU É MUITO BOIOLINHA MESMO: '+rate+'\n\nOLHA O TANTO QUE DEU KKKKKKKKKKKKKKK: '+ kl+'%', text, { quoted: mek })
 					break
                   case 'timer':
 				if (args[1]=="segundo") {var timer = args[0]+"000"
