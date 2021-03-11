@@ -26,9 +26,10 @@ const help1 = (prefix) => {
 ┣⊱❥ *marvelogo <texto | texto>*
 ┣⊱❥ *snow <texto | texto>*
 ┣⊱❥ *firetext*
+${pushname}
 
 ════════════════════
-*DARK YT* 🤗
+DAVI BOT
 *Digite dono para mais info*
 ════════════════════`
 }
