@@ -2583,7 +2583,7 @@ break
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					var nomor = mek.participant
 					const close = {
-					text: `Grupo fechado pelo administrador @${nomor.split("@s.whatsapp.net")[0]}\nsekarang *apenas administrador* quem pode enviar mensagens`,
+					text: `GRUPO FECHADO PELO ADMINISTRADOR @${nomor.split("@s.whatsapp.net")[0]} APENAS ADMINISTRADOR PODE ENVIAR MENSAGENS`,
 					contextInfo: { mentionedJid: [nomor] }
 					}
 					client.groupSettingChange (from, GroupSettingChange.messageSend, true);
@@ -2711,7 +2711,7 @@ break
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					open = {
-					text: `Grupo aberto pelo administrador @${sender.split("@")[0]}\nsekarang *todos os participantes* pode enviar mensagens`,
+					text: `GRUPO ABERTO PELO ADMINISTRADOR @${sender.split("@")[0]} TODOS OS PARTICIPANTES PODE ENVIAR MENSAGENS`,
 					contextInfo: { mentionedJid: [sender] }
 					}
 					client.groupSettingChange (from, GroupSettingChange.messageSend, false)
