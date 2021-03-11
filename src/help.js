@@ -49,13 +49,13 @@ const help = (prefix) => {
 ┃🤬 ${prefix}rebaixar
 ┃🤬 ${prefix}admins
 ┃🤬 ${prefix}marcar2
-┃🤬 ${prefix}bc [texto] (ele faz uma ™)
+┃🤬 ${prefix}tm [texto] (ele faz uma ™)
 ┃🤬 ${prefix}marcar3
 ┃🤬 ${prefix}bloqueados
 ┃🤬 ${prefix}bloquear [@]
 ┃🤬 ${prefix}desbloquear [@]
 ┃🤬 ${prefix}limpar
-┃🤬 ${prefix}bc [ texto ]
+┃🤬 ${prefix}tm [ texto ]
 ┃🤬 ${prefix}bemvindo [1/0]
 ┃🤬 ${prefix}clonar [@]
 ┃🤬 ${prefix}help1
@@ -129,6 +129,8 @@ const help = (prefix) => {
 ┃
 ┣━━🦊「 GRUPO 」🦊━━
 ┃
+┃🤬 ${prefix}tm [ texto ]
+┃🤬 ${prefix}tmgp [ texto ]
 ┃🤬 ${prefix}notify [ texto ]
 ┃🤬 ${prefix}fechargp
 ┃🤬 ${prefix}abrirgp
