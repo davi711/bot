@@ -222,8 +222,6 @@ const help = (prefix) => {
 ┃🤬 ${prefix}msc6
 ┃🤬 TETO - FAZER DINHEIRO
 ┃🤬 ${prefix}msc7
-┃🤬 KREW$ - ZIP
-┃🤬 ${prefix}msc8
 ┃
 ┣━━🦊「 OUTROS /2 」🦊━━
 ┃
