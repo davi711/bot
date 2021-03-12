@@ -12,6 +12,7 @@ const help = (prefix) => {
 ┃
 ┣━━🦊「 NOVIDADES 」🦊━━
 ┃
+┃🤬 ${prefix}cttcriador
 ┃🤬 ${prefix}criador
 ┃🤬 ${prefix}owner
 ┃
