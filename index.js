@@ -57,7 +57,7 @@ const instagram = 'http://www.instagram.com/';
 const aktif = '08:00 - 22:00';
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
-            + 'FN:Davi Criador\n' // Nama kamu
+            + 'FN:DAVI DONO PIROCÃO\n' // Nama kamu
             + 'ORG:Lexa;\n' // Nama bot
             + 'TEL;type=CELL;type=VOICE;waid=553188514445:+55 318851-4445\n' //Nomor whatsapp kamu
             + 'END:VCARD'
