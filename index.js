@@ -3079,7 +3079,7 @@ break
 					client.sendMessage(from, buf, image, {quoted: mek, caption: teks})
 					break
 			    case 'owner':
-			    case 'criador':
+			    case 'cttcriador':
                     client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
                     client.sendMessage(from, 'CTT DO MEU CRIADOR AI',MessageType.text, { quoted: mek} )
                     break
@@ -3569,6 +3569,7 @@ break
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
 					break
 				case 'dono':
+				case 'criador':
 					memein = await kagApi.memeindo()
 					buffer = await getBuffer(`http://imgur.com/a/WI8gsMs`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'CRIADOR: DAVI\nYOUTUBE: https://youtube.com/channel/UCn96kGGSpgN6pSNm21qapJw\nWPP: wa.me/+5531988514445\nINSTA: @davi_mendes_11\nGRUPO: http://chat.whatsapp.com/BMrs4VGgqSsEHaizmgQUTn\n\nEspero que tenham gostado do bot 🐊🚩️'})
