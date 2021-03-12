@@ -12,21 +12,13 @@ const help = (prefix) => {
 ┃
 ┣━━🦊「 NOVIDADES 」🦊━━
 ┃
-┃🤬 ${prefix}animecry
-┃🤬 ${prefix}chentai [premium]
-┃🤬 ${prefix}gcpf [premium]
-┃🤬 ${prefix}gay [@]
-┃🤬 ${prefix}gbin [premium]
-┃🤬 ${prefix}pack [premium]
-┃🤬 ${prefix}destrava [premium]
-┃🤬 ${prefix}gpessoa [premium]
-┃🤬 ${prefix}wame
-┃🤬 ${prefix}spamcall
-┃🤬 ${prefix}play (nome da msc)
+┃🤬 ${prefix}criador
+┃🤬 ${prefix}owner
 ┃
 ┣━━🦊「 MENU 」🦊━━
 ┃
 ┃🤬 ${prefix}figu
+┃🤬 ${prefix}animecry
 ┃🤬 ${prefix}toimg
 ┃🤬 ${prefix}darkjokes (memes aleatórios)
 ┃🤬 ${prefix}memeindo
@@ -34,44 +26,29 @@ const help = (prefix) => {
 ┃🤬 ${prefix}lolih [on]
 ┃🤬 ${prefix}nsfwloli [off]
 ┃🤬 ${prefix}url2img
+┃🤬 ${prefix}play (nome da msc)
 ┃🤬 ${prefix}leens [na legenda]
 ┃🤬 ${prefix}wait [na legenda]
 ┃🤬 ${prefix}setprefix
 ┃
 ┣━━🦊「 OUTROS 」🦊━━
 ┃
-┃🤬 ${prefix}linkgp
+┃🤬 ${prefix}wame
+┃🤬 ${prefix}spamcall
+┃🤬 ${prefix}play (nome da msc)
 ┃🤬 ${prefix}simih [1/0]
-┃🤬 ${prefix}marcar
-┃🤬 ${prefix}add [@]
-┃🤬 ${prefix}banir [@]
-┃🤬 ${prefix}promover [@]
-┃🤬 ${prefix}rebaixar
-┃🤬 ${prefix}admins
-┃🤬 ${prefix}marcar2
 ┃🤬 ${prefix}tm [texto] (ele faz uma ™)
-┃🤬 ${prefix}marcar3
 ┃🤬 ${prefix}bloqueados
 ┃🤬 ${prefix}bloquear [@]
 ┃🤬 ${prefix}desbloquear [@]
 ┃🤬 ${prefix}limpar
 ┃🤬 ${prefix}tm [ texto ]
-┃🤬 ${prefix}bemvindo [1/0]
-┃🤬 ${prefix}clonar [@]
 ┃🤬 ${prefix}help1
 ┃🤬 ${prefix}dono
 ┃🤬 ${prefix}owner
 ┃🤬 ${prefix}tts [texto]
-┃🤬 ${prefix}setnome
 ┃🤬 ${prefix}termux
-┃🤬 ${prefix}setfoto
-┃🤬 ${prefix}grupoinfo
 ┃🤬 ${prefix}ytmp4
-┃🤬 ${prefix}bomdia
-┃🤬 ${prefix}boanoite
-┃🤬 ${prefix}marcar
-┃🤬 ${prefix}marcar2
-┃🤬 ${prefix}marcar3
 ┃
 ┣━━🦊「 IMAGENS 」🦊━━
 ┃
@@ -113,6 +90,10 @@ const help = (prefix) => {
 ┣━━🦊「 PREMIUM 」🦊━━
 ┃
 ┃🤬 ${prefix}dado
+┃🤬 ${prefix}destrava [premium]
+┃🤬 ${prefix}gpessoa [premium]
+┃🤬 ${prefix}pack [premium]
+┃🤬 ${prefix}chentai [premium]
 ┃🤬 ${prefix}cekvip
 ┃🤬 ${prefix}premiumlist
 ┃🤬 ${prefix}delete
@@ -126,10 +107,30 @@ const help = (prefix) => {
 ┃🤬 ${prefix}pack
 ┃🤬 ${prefix}destrava
 ┃🤬 ${prefix}gpessoa
+┃🤬 ${prefix}gbin [premium]
+┃🤬 ${prefix}gcpf [premium]
 ┃
 ┣━━🦊「 GRUPO 」🦊━━
 ┃
 ┃🤬 ${prefix}tm [ texto ]
+┃🤬 ${prefix}play (nome da msc)
+┃🤬 ${prefix}setnome
+┃🤬 ${prefix}bemvindo [1/0]
+┃🤬 ${prefix}bomdia
+┃🤬 ${prefix}boanoite
+┃🤬 ${prefix}marcar
+┃🤬 ${prefix}marcar2
+┃🤬 ${prefix}marcar3
+┃🤬 ${prefix}clonar [@]
+┃🤬 ${prefix}setfoto
+┃🤬 ${prefix}grupoinfo
+┃🤬 ${prefix}promover [@]
+┃🤬 ${prefix}rebaixar
+┃🤬 ${prefix}admins
+┃🤬 ${prefix}linkgp
+┃🤬 ${prefix}banir [@]
+┃🤬 ${prefix}add [@]
+┃🤬 ${prefix}gay [@]
 ┃🤬 ${prefix}tmgp [ texto ]
 ┃🤬 ${prefix}notify [ texto ]
 ┃🤬 ${prefix}fechargp
@@ -173,6 +174,7 @@ const help = (prefix) => {
 ┃
 ┃🤬 ${prefix}neko
 ┃🤬 ${prefix}ttp [texto]
+┃🤬 ${prefix}spamcall
 ┃🤬 ${prefix}testime
 ┃🤬 ${prefix}tomp3
 ┃🤬 ${prefix}modoanime [on/off]
