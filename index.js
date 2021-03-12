@@ -3079,6 +3079,7 @@ break
 					client.sendMessage(from, buf, image, {quoted: mek, caption: teks})
 					break
 			    case 'owner':
+			    case 'criador':
                     client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
                     client.sendMessage(from, 'CTT DO MEU CRIADOR AI',MessageType.text, { quoted: mek} )
                     break
