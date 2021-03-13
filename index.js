@@ -3822,7 +3822,7 @@ break
 						mentions(teks, mentioned, true)
 						client.groupRemove(from, mentioned)
 					} else {
-						mentions(`Alvo removido com sucesso  : @${mentioned[0].split('@')[0]}`, mentioned, true)
+						mentions(`AVE MARIA DOIDO AO FAMOSO TRÊS CAPA TROPA AIIIII DAVI BOT APELÃO\n\n @${mentioned[0].split('@')[0]} VOCÊ ACABOU DE TOMAR O FAMOSO KKKKKKKKKKKKKKK`, mentioned, true)
 						client.groupRemove(from, mentioned)
 					}
 					break
