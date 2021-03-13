@@ -114,6 +114,7 @@ const help = (prefix) => {
 ┣━━🦊「 GRUPO 」🦊━━
 ┃
 ┃🤬 ${prefix}tm [ texto ]
+┃🤬 ${prefix}sair
 ┃🤬 ${prefix}play (nome da msc)
 ┃🤬 ${prefix}setnome
 ┃🤬 ${prefix}bemvindo [1/0]
