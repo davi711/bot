@@ -12,9 +12,7 @@ const help = (prefix) => {
 ┃
 ┣━━🦊「 NOVIDADES 」🦊━━
 ┃
-┃🤬 ${prefix}cttcriador
-┃🤬 ${prefix}criador
-┃🤬 ${prefix}owner
+┃🤬 ${prefix}tmgp2 (para ADMs)
 ┃
 ┣━━🦊「 MENU 」🦊━━
 ┃
@@ -134,6 +132,7 @@ const help = (prefix) => {
 ┃🤬 ${prefix}add [@]
 ┃🤬 ${prefix}gay [@]
 ┃🤬 ${prefix}tmgp [ texto ]
+┃🤬 ${prefix}tmgp2 [ texto ]
 ┃🤬 ${prefix}notify [ texto ]
 ┃🤬 ${prefix}fechargp
 ┃🤬 ${prefix}abrirgp
@@ -218,7 +217,7 @@ const help = (prefix) => {
 ┃🤬 ${prefix}msc1
 ┃🤬 PISCA A XERECA QUANDO VER O PARAFAL(Remix)
 ┃🤬 ${prefix}msc2
-┃🤬 REAL TRAP ROCINHA
+┃🤬 RAP DO SOLITÁRIO
 ┃🤬 ${prefix}msc3
 ┃🤬 UNIÃO FLASCO
 ┃🤬 ${prefix}msc4
