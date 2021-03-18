@@ -1803,7 +1803,7 @@ if (text.includes("placa"))
                     client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                     break 
 				case 'msc3':
-                    tujuh = fs.readFileSync('./assets/traprocinha.mp3');
+                    tujuh = fs.readFileSync('./assets/rapsolitario.mp3');
                     client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                     break 
 				case 'msc4':
