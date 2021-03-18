@@ -3992,6 +3992,11 @@ break
 						reply('Só uma foto mano')
 					}
 					break
+					case 'emojiteste':
+				anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/emoji2png?emoji=%F0%9F%98%82&type=aple`, {method: 'get'})
+				jes = await getBuffer(anu)
+				client.sendMessage(from, jes, image,{quoted : mek, caption : 'DONE'})
+				break
 				default:
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
