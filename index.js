@@ -3918,7 +3918,7 @@ break
 				case 'notify':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isadminbot) return reply('ESTE COMANDO SÓ PODE SER USADO PELO DAVI')
-					var value = body.slice(9)
+					var value = body.slice(8)
 					var group = await client.groupMetadata(from)
 					var member = group['participants']
 					var mem = []
