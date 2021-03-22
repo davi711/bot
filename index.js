@@ -705,10 +705,11 @@ if (text.includes("placa"))
 			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			switch(command) {
-                   case 'menu':
-                    buffer = await getBuffer(`http://imgur.com/gallery/Bbbkyjc`)
-                    client.sendMessage(from, buffer, image, {quoted: mek, caption: help(prefix)})
-                    break
+				case 'help':
+				case 'menu':
+					hisil = fs.readFileSync('./assets/menuimg.jpg')
+					client.sendMessage(from, hisil, image, {quoted: mek, caption: help(prefix), text})
+					break
 				case 'help1':
 				case 'menu1':
 					client.sendMessage(from, help1(prefix), text)
