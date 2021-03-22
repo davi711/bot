@@ -3789,7 +3789,7 @@ break
 						reply('Falha ao adicionar destino, talvez porque é privado')
 					}
 					break
-				case 'banir':
+				case 'banirdogp':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -3988,7 +3988,7 @@ break
 						reply('Só uma foto mano')
 					}
 					break
-				case 'banir usuário':
+				case 'banirdobot':
 					client.updatePresence(from, Presence.composing) 
 					if (args.length < 1) return
 					if (!isOwner) return reply(mess.only.ownerB)
@@ -3996,7 +3996,7 @@ break
 			        ban = mentioned
 					reply(`O usuario foi banido do bot com sucesso : ${ban}`)
 					break
-				case 'desbanir usuário':
+				case 'desbanirdobot':
 					if (!isOwner)return reply(mess.only.ownerB)
 					bnnd = body.slice(8)
 					ban.splice(`${bnnd}@s.whatsapp.net`, 1)
