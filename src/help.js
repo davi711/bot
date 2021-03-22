@@ -12,8 +12,8 @@ const help = (prefix) => {
 ┃
 ┣━━🦊「 NOVIDADES 」🦊━━
 ┃
-┃🤬${prefix}banir usuário [@]
-┃🤬${prefix}desbanir usuário [@]
+┃🤬 ${prefix}banirdobot [@]
+┃🤬 ${prefix}desbanirdobot [@]
 ┃
 ┣━━🦊「 MENU 」🦊━━
 ┃
@@ -130,7 +130,7 @@ const help = (prefix) => {
 ┃🤬 ${prefix}rebaixar
 ┃🤬 ${prefix}admins
 ┃🤬 ${prefix}linkgp
-┃🤬 ${prefix}banir [@]
+┃🤬 ${prefix}banirdogp [@]
 ┃🤬 ${prefix}add [@]
 ┃🤬 ${prefix}gay [@]
 ┃🤬 ${prefix}tmgp [ texto ]
