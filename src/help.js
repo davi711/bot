@@ -12,7 +12,8 @@ const help = (prefix) => {
 ┃
 ┣━━🦊「 NOVIDADES 」🦊━━
 ┃
-┃🤬 ${prefix}tmgp2 (para ADMs)
+┃🤬${prefix}banir usuário [@]
+┃🤬${prefix}desbanir usuário [@]
 ┃
 ┣━━🦊「 MENU 」🦊━━
 ┃
@@ -78,11 +79,10 @@ const help = (prefix) => {
 ┃
 ┃🤬 ${prefix}simih 1 (para ativar)
 ┃🤬 ${prefix}simih 0 (para desativar)
-┃ ${prefix}simi (sua mensagem)
+┃🤬 ${prefix}simi (sua mensagem)
 ┃
 ┣━━🦊「 EM TESTE 」🦊━━
 ┃
-┃🤬 ${prefix}
 ┃🤬 ${prefix}
 ┃🤬 ${prefix}
 ┃
@@ -111,6 +111,8 @@ const help = (prefix) => {
 ┃
 ┣━━🦊「 GRUPO 」🦊━━
 ┃
+┃🤬${prefix}banir usuário [@]
+┃🤬${prefix}desbanir usuário [@]
 ┃🤬 ${prefix}tm [ texto ]
 ┃🤬 ${prefix}sair
 ┃🤬 ${prefix}play (nome da msc)
@@ -136,7 +138,6 @@ const help = (prefix) => {
 ┃🤬 ${prefix}notify [ texto ]
 ┃🤬 ${prefix}fechargp
 ┃🤬 ${prefix}abrirgp
-┃🤬 ${prefix}banir
 ┃🤬 ${prefix}leveling [ on/off ]
 ┃🤬 ${prefix}level
 ┃🤬 ${prefix}add
