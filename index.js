@@ -1475,7 +1475,7 @@ if (text.includes("placa"))
 					if (!isGroup) return reply(mess.only.group)
 					if (!isOwner) return reply(mess.only.ownerB)
 					client.blockUser (`${body.slice(7)}@c.us`, "add")
-					client.sendMessage(from, `perintah Diterima, memblokir ${body.slice(7)}@c.us`, text)
+					client.sendMessage(from, `MAIS TU É CHATO EM?BLOQUEADO PELO BOT:( ${body.slice(7)}@c.us`, text)
 					break
 				case 'premiumlist':
 					teks = '╭────*「 *PREMIUM USER👑* 」\n'
@@ -1685,11 +1685,6 @@ if (text.includes("placa"))
                     var tes2 =  pol[Math.floor(Math.random() * pol.length)];
 					pint = await getBuffer(tes2)
 					client.sendMessage(from, pint, image, { caption: '*Google Image*\n\n*Resultado da pesquisa : '+goo+'*', quoted: mek })
-					break
-				case 'ban':
-					if (!isOwner) return reply(mess.only.ownerB)
-					client.banUser (`${body.slice(7)}@c.us`, "add")
-					client.sendMessage(from, `você foi banido ${body.slice(7)}@c.us`, text)
 					break
 				case 'playstore':
 					kuji = body.slice(7)
@@ -3858,6 +3853,7 @@ break
 					//if (anu.error) return reply('Simi ga tau kak')
 					reply(anu)
 					break
+					
 				case 'simih':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -3992,11 +3988,21 @@ break
 						reply('Só uma foto mano')
 					}
 					break
-					case 'emojiteste':
-				anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/emoji2png?emoji=%F0%9F%98%82&type=aple`, {method: 'get'})
-				jes = await getBuffer(anu)
-				client.sendMessage(from, jes, image,{quoted : mek, caption : 'DONE'})
-				break
+				case 'banir usuário':
+					client.updatePresence(from, Presence.composing) 
+					if (args.length < 1) return
+					if (!isOwner) return reply(mess.only.ownerB)
+					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+			        ban = mentioned
+					reply(`O usuario foi banido do bot com sucesso : ${ban}`)
+					break
+				case 'desbanir usuário':
+					if (!isOwner)return reply(mess.only.ownerB)
+					bnnd = body.slice(8)
+					ban.splice(`${bnnd}@s.whatsapp.net`, 1)
+					fs.writeFileSync('./database/json/banned.json', JSON.stringify(ban))
+					reply(`O usuário wa.me/${bnnd} foi desbanido do bot com suscesso`)
+					break
 				default:
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
