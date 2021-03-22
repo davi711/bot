@@ -710,6 +710,10 @@ if (text.includes("placa"))
                     putagg = await getBuffer(`https://i.ibb.co/yYLrPhL/IMG-20210322-WA0393.jpg`)
                     client.sendMessage(from, putagg, image, {quoted: mek, caption: help(prefix)})
                     break
+				case 'menu':
+                    putagg = await getBuffer(`https://i.ibb.co/yYLrPhL/IMG-20210322-WA0393.jpg`)
+                    client.sendMessage(from, putagg, image, {quoted: mek, caption: help(prefix)})
+                    break
 				case 'help1':
 				case 'menu1':
 					client.sendMessage(from, help1(prefix), text)
