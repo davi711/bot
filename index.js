@@ -707,9 +707,9 @@ if (text.includes("placa"))
 			switch(command) {
 				case 'help':
 				case 'menu':
-					hisil = fs.readFileSync('./assets/menuimg.jpg')
-					client.sendMessage(from, hisil, image, {quoted: mek, caption: help(prefix), text})
-					break
+                    putagg = await getBuffer(`https://ibb.co/0QWph2Q`)
+                    client.sendMessage(from, putagg, image, {quoted: mek, caption: help(prefix)})
+                    break
 				case 'help1':
 				case 'menu1':
 					client.sendMessage(from, help1(prefix), text)
