@@ -276,26 +276,26 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-					wait: '❬❗❭ Espere',
-					success: '️❬ ✔ ❭ Sucesso 🖤',
-					levelon: '❬ ✔ ❭ *leveling* *ativado*',
-					leveloff: ' ❬ X ❭  *leveling* *desativado*',
-					levelnoton: '❬ X ❭ *leveling não ativado*',
+					wait: '⌜ 🙄 ⌟ AGUARDE...',
+					success: '️⌜ 😎 ⌟ SUSSESO',
+					levelon: '⌜ 😳 ⌟ LEVEL ATIVADO',
+					leveloff: '⌜ 😭 ⌟   ATIVA AI DNV PFV',
+					levelnoton: '⌜ 😐 ⌟ O LEVEL NÃO ESTÁ ATIVO',
 					levelnol: '*error* 0 °-°',
 					error: {
-				stick: '*Bem, falhe, tente novamente ^_^*',
-				Iv: '𝗠𝗮𝗮𝗳 𝗹𝗶𝗻𝗸 𝘁𝗶𝗱𝗮𝗸 𝘃𝗮𝗹𝗶𝗱☹️'
+				stick: '⌜ 😶 ⌟ DEU ERRO TENTA AI DNV',
+				Iv: '⌜ 🙃 ⌟ Link inválido'
 				},
 				only: {
-					group: '[❗] Este comando só pode ser usado em grupos! ❌',
-					premium: '[❗] ESTE PEDIDO É SO PARA *USUÁRIOS PREMIUMS*',
-					mod: '[❗] ESTE PEDIDO É ESPECÍFICO PARA USUARIO MOD DARK BOT*',
+					group: '⌜ 👥 ⌟ ESTE COMANDO É EXCLUSIVO PARA GRUPOS',
+					premium: '⌜ 🥋 ⌟  ESTE COMANDO É EXCLUSIVO PARA USUÁRIOS PREMIUNS',
+					mod: '⌜ 🤪 ⌟ ESTE COMANDO É EXCLUSIVO PARA USUÁRIOS MOD DO DAVI BOT',
 					benned: 'VOCÊ ESTÁ BANIDO CONTATE O DAVI PARA SER DESBANIDO',
-					ownerG: 'ESTE COMANDO SÓ PODE SER USADO PELO DAVI',
-					ownerB: '🤬 ESTE COMANDO SÓ PODE SER USADO PELO DAVI 🤬',
+					ownerG: '⌜ 😡 ⌟ ESTE COMANDO É EXCLUSIVO PARA O DAVI',
+					ownerB: '⌜ 😡 ⌟ ESTE COMANDO É EXCLUSIVO PARA O DAVI',
 					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmã. Você não está registrado como amigo de Dark. Registre-se para fazer amizade com o bot Dark por meio, \n\nCommand : ${prefix}daftar nama|idade\nExemplo : ${prefix}daftar Dark|17\n\n──「 Dark BOT 」──`,
-					admin: '[❗] Este comando só pode ser usado por administradores de grupo! ❌',
-					Badmin: ' [❗] Este comando só pode ser usado quando o bot se torna administrador! ❌',
+					admin: '⌜ 😝 ⌟ ESTE COMANDO É EXCLUSIVO PARA ADMINISTRADORES DO GRUPO',
+					Badmin: '⌜ 😕 ⌟ O COMANDO SÓ PODE SER USADO QUANDO O BOT SE TORNA ADMINISTRADOR',
 				}
 			}
 
@@ -3322,7 +3322,7 @@ break
 					uptime = process.uptime()
 					client.sendMessage(from,  `*──────────────────*\n*Nome do bot:* DARKBOT\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Status:* *ATIVO*\n*──────────────────*\n*Status Bot:* *${kyun(uptime)}*\n\n*VOCE É UM MEMBRO PREMIUM* 🐊🚩\n*──────────────────*` , text, { quoted: mek, })
 					break
-					case 'dellvip':
+					case 'dellvip'
 					if (!isOwner) return reply(mess.only.ownerB)
 					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite * # Daftarvip * para adquirir o acesso Premium!' ,text, { quoted: mek })
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
@@ -3961,61 +3961,4 @@ break
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
-						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						buff = await client.downloadMediaMessage(encmedia)
-						for (let _ of anu) {
-							client.sendMessage(_.jid, buff, image, {caption: `[ admin bot Broadcast ]\n\n${body.slice(4)}`})
-						}
-						reply('Transmissão enviada')
-					} else {
-						for (let _ of anu) {
-							sendMess(_.jid, `[ *TRANSMISSÃO* ]\n\n${body.slice(4)}`)
-						}
-						reply('Transmissão enviada')
-					}
-					break
-				case 'wait':
-					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-						reply(mess.wait)
-						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						media = await client.downloadMediaMessage(encmedia)
-						await wait(media).then(res => {
-							client.sendMessage(from, res.video, video, {quoted: mek, caption: res.teks.trim()})
-						}).catch(err => {
-							reply(err)
-						})
-					} else {
-						reply('Só uma foto mano')
-					}
-					break
-				case 'banirdobot':
-					client.updatePresence(from, Presence.composing) 
-					if (args.length < 1) return
-					if (!isOwner) return reply(mess.only.ownerB)
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-			        ban = mentioned
-					reply(`O usuario foi banido do bot com sucesso : ${ban}`)
-					break
-				case 'desbanirdobot':
-					if (!isOwner)return reply(mess.only.ownerB)
-					bnnd = body.slice(8)
-					ban.splice(`${bnnd}@s.whatsapp.net`, 1)
-					fs.writeFileSync('./database/json/banned.json', JSON.stringify(ban))
-					reply(`O usuário wa.me/${bnnd} foi desbanido do bot com suscesso`)
-					break
-				default:
-					if (isGroup && isSimi && budy != undefined) {
-						console.log(budy)
-						muehe = await simih(budy)
-						console.log(muehe)
-						reply(muehe)
-					} else {
-						console.log(color('[ERROR]','red'), 'Unregistered Command from', color(sender.split('@')[0]))
-					}
-                           }
-		} catch (e) {
-			console.log('Error : %s', color(e, 'red'))
-		}
-	})
-}
-starts()
+						const encmedia =
