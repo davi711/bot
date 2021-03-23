@@ -3943,4 +3943,46 @@ break
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
-						const encmedia =
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+						buff = await client.downloadMediaMessage(encmedia)
+						for (let _ of anu) {
+							client.sendMessage(_.jid, buff, image, {caption: `[ admin bot Broadcast ]\n\n${body.slice(4)}`})
+						}
+						reply('Transmissão enviada')
+					} else {
+						for (let _ of anu) {
+							sendMess(_.jid, `[ *TRANSMISSÃO* ]\n\n${body.slice(4)}`)
+						}
+						reply('Transmissão enviada')
+					}
+					break
+				case 'wait':
+					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+						reply(mess.wait)
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+						media = await client.downloadMediaMessage(encmedia)
+						await wait(media).then(res => {
+							client.sendMessage(from, res.video, video, {quoted: mek, caption: res.teks.trim()})
+						}).catch(err => {
+							reply(err)
+						})
+					} else {
+						reply('Só uma foto mano')
+					}
+					break
+				default:
+					if (isGroup && isSimi && budy != undefined) {
+						console.log(budy)
+						muehe = await simih(budy)
+						console.log(muehe)
+						reply(muehe)
+					} else {
+						console.log(color('[ERROR]','red'), 'Unregistered Command from', color(sender.split('@')[0]))
+					}
+                           }
+		} catch (e) {
+			console.log('Error : %s', color(e, 'red'))
+		}
+	})
+}
+starts()
