@@ -3322,8 +3322,10 @@ break
 					uptime = process.uptime()
 					client.sendMessage(from,  `*──────────────────*\n*Nome do bot:* DARKBOT\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Status:* *ATIVO*\n*──────────────────*\n*Status Bot:* *${kyun(uptime)}*\n\n*VOCE É UM MEMBRO PREMIUM* 🐊🚩\n*──────────────────*` , text, { quoted: mek, })
 					break
+					
+
 					case 'dellvip'
-				  if (!isOwner) return reply(mess.only.ownerB)
+					 if (!isOwner) return reply(mess.only.ownerB)
 					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite * # Daftarvip * para adquirir o acesso Premium!' ,text, { quoted: mek })
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
