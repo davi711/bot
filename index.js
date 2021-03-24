@@ -3924,12 +3924,11 @@ break
 					}
 					client.sendMessage(from, options, text)
 					break
-case 'corno':
+				case 'corno':
 					var be = Math.floor(Math.random() * 101) + '%' 
 					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyVckosA_R_svobelK6dVDe5Y9GHQGSea2ag&usqp=CAU`)
 					client.sendMessage(from, buffer, image, { quoted: mek, caption:` Olha o boiii\n VOCÊ É `+be +` CORNO.`}) 
 					break
-					//
 				case 'setpp3':
                     if (!isGroup) return reply(mess.only.group)
                     if (!isfrendsowner) return reply('Quem é Você?')
