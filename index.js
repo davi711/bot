@@ -3932,7 +3932,7 @@ break
 case 'punheteiro':
 					var be = Math.floor(Math.random() * 101) + '%' 
 					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-2DRXOIYnmUGZO0iSrPOCzZuB_GVgLfhGYA&usqp=CAU`)
-					client.sendMessage(from, buffer, image, { quoted: mek, caption:` *MEDIDOR DE NOME DO MEDIDOR*\n_  *VOCÊ É* `+be +` *NOME DO MEDIDORKKKK*._`}) 
+					client.sendMessage(from, buffer, image, { quoted: mek, caption:` *MEDIDOR DE NOME DO MEDIDOR*\n_*VOCÊ É* `+be +` *NOME DO MEDIDORKKKK*._`}) 
 					break
 					//
 				case 'setpp3':
