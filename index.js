@@ -3929,6 +3929,12 @@ break
 					}
 					client.sendMessage(from, options, text)
 					break
+case 'punheteiro':	    
+				    
+					var be = Math.floor(Math.random() * 101) + '%' 
+					buffer = await getBuffer(`link da imagem`)
+					baby.sendMessage(from, buffer, image, { quoted: mek, caption:` *MEDIDOR DE NOME DO MEDIDOR*\n_*${pushname}* *VOCÊ É* `+be +` *NOME DO MEDIDORKKKK*._`}) 
+					break
 					//
 				case 'setpp3':
                     if (!isGroup) return reply(mess.only.group)
