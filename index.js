@@ -626,7 +626,7 @@ if (text.includes("placa"))
 	
 	if (messagesC.includes("fdp")){
 			client.updatePresence(from, Presence.composing)
-			reply("teu pai")
+			reply("só te imito")
 	}
 	
 		if (messagesC.includes("tmnc")){
