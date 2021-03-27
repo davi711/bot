@@ -2751,7 +2751,7 @@ break
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
                 case 'phlogo':
-					var gh = body.slice(10)
+					var gh = body.slice(8)
 					var gbl1 = gh.split("|")[0];
 					var gbl2 = gh.split("|")[1];
 					if (args.length < 1) return reply('Cadê o texto, hum')
