@@ -12,6 +12,7 @@ const help = (prefix) => {
 │
 ├──🦊「 NOVIDADES 」🦊──
 │
+│🤬 ${prefix}tiktokeffect [ texto]
 │🤬 ${prefix}attp [ texto ]
 │
 ├──🦊「 MENU 」🦊──
