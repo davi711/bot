@@ -2288,7 +2288,7 @@ break
 				case 'setabout':
 					if (args.length < 1) return
 					if (!isOwner) return reply(mess.only.ownerB)
-					name = body.slice(9)
+					about = body.slice(9)
 					reply(`O nome do bot foi alterado com sucesso para : ${about}`)
 					break
 					case 'clove':
