@@ -914,7 +914,7 @@ if (text.includes("placa"))
 					var teko = gh.split("/")[1];
 					if (args.length < 1) return reply('Cadê o texto, hum')
 					reply(mess.wait)
-					anu = await fetchJson(`https://videfikri.com/api/textmaker/tiktokeffect/?text1=tiko&text2=teko`, {method: 'get'})
+					anu = await fetchJson(`https://videfikri.com/api/textmaker/tiktokeffect/?text1=${tiko}&text2=${teko}`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
