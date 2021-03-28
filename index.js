@@ -1530,6 +1530,8 @@ if (text.includes("placa"))
 			     	await limitAdd(sender) 
 			     	break  
 			     case 'xvideos':
+				    if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
               	    if (args.length < 1) return reply('Cadê o texto, mano?')
                     anu = await fetchJson(`https://api.arugaz.my.id/api/media/xvideo/search?query=${body.slice(9)}`, {method: 'get'})
                     teks = `===============\n`
