@@ -2291,6 +2291,12 @@ break
 					about = body.slice(9)
 					reply(`O nome do bot foi alterado com sucesso para : ${about}`)
 					break
+				case 'attp':
+					if (!isGroup) return reply(mess.only.group)
+					if (args.length < 1) return reply(`Cadê o texto?`)
+					attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(6)}`)
+					client.sendMessage(from, attp2, sticker, {quoted: mek})
+					break
 					case 'clove':
 					  if (args.length < 1) return reply('Cadê o texto, mano??')
                      if (args.length > 10) return reply('pelo menos 10 caracteres')
