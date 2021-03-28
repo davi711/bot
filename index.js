@@ -2278,11 +2278,18 @@ break
 					name = body.slice(12)
 					reply(`O nome do bot foi alterado com sucesso para : ${name}`)
 					break
+				case 'woodlogo':
+              	    if (args.length < 1) return reply('Onde está o texto, irmão??')
+                    teks = `${body.slice(10)}`
+                    if (teks.length > 10) return client.sendMessage(from, 'Teksnya kepanjangan, Maksimal 10 kalimat', text, {quoted: mek})
+                    buff = await getBuffer(`https://videfikri.com/api/textmaker/woodblock/?text=${teks}`, {method: 'get'})
+                    client.sendMessage(from, buff, image, {quoted: mek, caption: `${teks}`})
+			     	break
 				case 'setabout':
 					if (args.length < 1) return
 					if (!isOwner) return reply(mess.only.ownerB)
 					name = body.slice(9)
-					reply(`O nome do bot foi alterado com sucesso para : ${about}`)
+					reply(`O nome do bot foi alterado com sucesso para : `${about}`)
 					break
 					case 'clove':
 					  if (args.length < 1) return reply('Cadê o texto, mano??')
