@@ -12,8 +12,7 @@ const help = (prefix) => {
 │
 ├──🦊「 NOVIDADES 」🦊──
 │
-│🤬 ${prefix}banirdobot [ @ ]
-│🤬 ${prefix}desbanirdobot [ @ ]
+│🤬 ${prefix}attp [ texto ]
 │
 ├──🦊「 MENU 」🦊──
 │
@@ -111,6 +110,7 @@ const help = (prefix) => {
 │
 ├──🦊「 GRUPO 」🦊──
 │
+│🤬 ${prefix}attp [ texto ]
 │🤬${prefix}banir usuário [ @ ]
 │🤬${prefix}desbanir usuário [ @ ]
 │🤬 ${prefix}tm [  texto  ]
