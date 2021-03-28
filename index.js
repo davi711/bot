@@ -908,13 +908,13 @@ if (text.includes("placa"))
 					buffer = await getBuffer(`https://api.vhtear.com/galaxytext?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
-                case 'phlogo':
-					var gh = body.slice(7)
-					var gbl1 = gh.split("|")[0];
-					var gbl2 = gh.split("|")[1];
+                case 'tiktokeffect':
+					var gh = body.slice(14)
+					var tiko = gh.split("/")[0];
+					var teko = gh.split("/")[1];
 					if (args.length < 1) return reply('Cadê o texto, hum')
 					reply(mess.wait)
-					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/textpro?theme=pornhub&text1=${gbl1}&text2=${gbl2}`, {method: 'get'})
+					anu = await fetchJson(`https://videfikri.com/api/textmaker/tiktokeffect/?text1=tiko&text2=teko`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
