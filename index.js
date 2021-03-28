@@ -2278,6 +2278,12 @@ break
 					name = body.slice(12)
 					reply(`O nome do bot foi alterado com sucesso para : ${name}`)
 					break
+				case 'setabout':
+					if (args.length < 1) return
+					if (!isOwner) return reply(mess.only.ownerB)
+					name = body.slice(9)
+					reply(`O nome do bot foi alterado com sucesso para : ${about}`)
+					break
 					case 'clove':
 					  if (args.length < 1) return reply('Cadê o texto, mano??')
                      if (args.length > 10) return reply('pelo menos 10 caracteres')
