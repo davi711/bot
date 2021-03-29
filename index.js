@@ -2070,7 +2070,7 @@ break
 					break
 		        case 'gay':		
 	            	if (args.length < 1) return reply('MARCA A BIXA KKKK')
-					rate = body.slice(1)
+					rate = body.slice(4)
 					const ti =['4','9','17','28','34','48','59','62','74','83','97','100','29','94','75','82','41','39']
 					const kl = ti[Math.floor(Math.random() * ti.length)]
 					client.sendMessage(from, 'TU É MUITO BOIOLINHA MESMO: '+rate+'\n\nOLHA O TANTO QUE DEU KKKKKKKKKKKKKKK: '+ kl+'%', text, { quoted: mek })
