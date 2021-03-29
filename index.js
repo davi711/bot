@@ -57,11 +57,11 @@ const instagram = 'http://www.instagram.com/';
 const aktif = '08:00 - 22:00';
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
-            + 'FN:Dark\n' // Nama kamu
+            + 'FN:Davi\n' // Nama kamu
             + 'ORG:Lexa;\n' // Nama bot
-            + 'TEL;type=CELL;type=VOICE;waid=5522996215481:+55 2299621-5481\n' //Nomor whatsapp kamu
+            + 'TEL;type=CELL;type=VOICE;waid=5531988514445:+55 3198851-4445\n' //Nomor whatsapp kamu
             + 'END:VCARD'
-prefix = '.','!','#'
+prefix = '.'
 blocked = []
 limitawal = '999999999'
 cr = '*Dark*'
@@ -235,7 +235,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Tchau @${num.split('@')[0]} Ja foi tarde 😂👋`
+				teks = `@${num.split('@')[0]} foi embora😐`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -276,26 +276,26 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-					wait: '❬❗❭ Espere',
+					wait: '⌜ 🙄 ⌟ AGUARDE...',
 					success: '️❬ ✔ ❭ Sucesso 🖤',
-					levelon: '❬ ✔ ❭ *leveling* *ativado*',
-					leveloff: ' ❬ X ❭  *leveling* *desativado*',
-					levelnoton: '❬ X ❭ *leveling não ativado*',
+					levelon: '⌜ 😳 ⌟ LEVEL ATIVADO',
+					leveloff: '⌜ 😭 ⌟   ATIVA AI DNV PFV',
+					levelnoton: '⌜ 😐 ⌟ O LEVEL NÃO ESTÁ ATIVO',
 					levelnol: '*error* 0 °-°',
 					error: {
-				stick: '*Bem, falhe, tente novamente ^_^*',
-				Iv: '𝗠𝗮𝗮𝗳 𝗹𝗶𝗻𝗸 𝘁𝗶𝗱𝗮𝗸 𝘃𝗮𝗹𝗶𝗱☹️'
+				stick: '⌜ 😶 ⌟ DEU ERRO TENTA AI DNV',
+				Iv: '⌜ 🙃 ⌟ Link inválido️'
 				},
 				only: {
-					group: '[❗] Este comando só pode ser usado em grupos! ❌',
-					premium: '[❗] ESTE PEDIDO É SO PARA *USUÁRIOS PREMIUMS*',
-					mod: '[❗] ESTE PEDIDO É ESPECÍFICO PARA USUARIO MOD DARK BOT*',
-					benned: 'Você para a banda, por favor, contate o proprietário para abrir sua banda',
-					ownerG: '[❗] Proprietário? Este é um recurso especial para o proprietário do bot ❌',
-					ownerB: '[❗] Proprietário? Este é um recurso especial para o proprietário do bot ❌',
+					group: '⌜ 👥 ⌟ ESTE COMANDO É EXCLUSIVO PARA GRUPOS',
+					premium: '⌜ 🥋 ⌟  ESTE COMANDO É EXCLUSIVO PARA USUÁRIOS PREMIUNS',
+					mod: '⌜ 🤪 ⌟ ESTE COMANDO É EXCLUSIVO PARA USUÁRIOS MOD DO DAVI BOT',
+					benned: 'VOCÊ ESTÁ BANIDO CONTATE O DAVI PARA SER DESBANIDO',
+					ownerG: '⌜ 😡 ⌟ ESTE COMANDO É EXCLUSIVO PARA O DAVI',
+					ownerB: '⌜ 😡 ⌟ ESTE COMANDO É EXCLUSIVO PARA O DAVI',
 					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmã. Você não está registrado como amigo de Dark. Registre-se para fazer amizade com o bot Dark por meio, \n\nCommand : ${prefix}daftar nama|idade\nExemplo : ${prefix}daftar Dark|17\n\n──「 Dark BOT 」──`,
-					admin: '[❗] Este comando só pode ser usado por administradores de grupo! ❌',
-					Badmin: ' [❗] Este comando só pode ser usado quando o bot se torna administrador! ❌',
+					admin: '⌜ 😝 ⌟ ESTE COMANDO É EXCLUSIVO PARA ADMINISTRADORES DO GRUPO',
+					Badmin: '⌜ 😕 ⌟ O COMANDO SÓ PODE SER USADO QUANDO O BOT SE TORNA ADMINISTRADOR',
 				}
 			}
 
