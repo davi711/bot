@@ -274,6 +274,7 @@ async function starts() {
 			const command = body.slice(1).trim().split(/ +/).shift().toLowerCase()
 			const args = body.trim().split(/ +/).slice(1)
 			const isCmd = body.startsWith(prefix)
+			pushname2 = denz.contacts[nameReq] != undefined ? denz.contacts[nameReq].vname || denz.contacts[nameReq].notify : undefined
 
 			mess = {
 					wait: '⌜ 🙄 ⌟ AGUARDE...',
@@ -327,6 +328,7 @@ async function starts() {
 			const ismod = mod.includes(sender)
 			const errorurl2 = 'https://i.ibb.co/dttZM8b/591530180aad.png'
 			const isadminbot = adminbotnumber.includes(sender)
+			pushname = index.contacts[nameReq] != undefined ? index.contacts[nameReq].vname || index.contacts[nameReq].notify : undefined
 			const isfrendsowner = frendsowner.includes(sender)
 			const isUrl = (url) => {
 			    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
@@ -2297,7 +2299,10 @@ break
 					attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(6)}`)
 					client.sendMessage(from, attp2, sticker, {quoted: mek})
 					break
-					case 'clove':
+				case 'testepnome':
+					if (!isOwner) return reply('🤬 ESTE COMANDO SÓ PODE SER USADO PELO DAVI 🤬')
+					if (args.length < 1) return reply ('oii ${pushname}')
+					break
 					  if (args.length < 1) return reply('Cadê o texto, mano??')
                      if (args.length > 10) return reply('pelo menos 10 caracteres')
 					 love = `${body.slice(7)}`
