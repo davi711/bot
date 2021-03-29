@@ -2772,13 +2772,11 @@ break
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
                 case 'phlogo':
-					var gh = body.slice(8)
-					var gbl711 = gh.split("|")[0];
-					var gbl299 = gh.split("|")[1];
-					if (args.length < 1) return reply('Cadê o texto zz?')
-					anu = await getBuffer(`https://api.zeks.xyz/api/phlogo?text1=${gbl711}&text2=${gbl299}&apikey=apivinz`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					exe = body.slice(7)
+					teks1 = exe.split("|")
+					teks2 = exe.split("|")
+					i = await getBuffer(`https://api.zeks.xyz/api/phlogo?text1=${teks1}&text2=${teks2}&apikey=apivinz`)
+					client.sendMessage(from, i, image, {quoted: mek})
 					break
 				case 'primbonjodoh':
 					var gh = body.slice(14)
