@@ -2772,7 +2772,7 @@ break
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
                 case 'phlogo':
-exe = body.slice(7)
+exe = body.slice(8)
 teks98 = exe.split("|")
 teks99 = exe.split("|")
 i = await getBuffer(`https://api.zeks.xyz/api/phlogo?text1=${teks99}&text2=${teks98}&apikey=apivinz`)
