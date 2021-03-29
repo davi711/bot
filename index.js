@@ -2299,9 +2299,13 @@ break
 					attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(6)}`)
 					client.sendMessage(from, attp2, sticker, {quoted: mek})
 					break
-				case 'testepnome':
+				case 'testepnome1':
 					if (!isOwner) return reply('🤬 ESTE COMANDO SÓ PODE SER USADO PELO DAVI 🤬')
 					if (args.length < 1) return reply ('oii ${pushname}')
+					break
+				case 'testepnome2':
+					if (!isOwner) return reply('🤬 ESTE COMANDO SÓ PODE SER USADO PELO DAVI 🤬')
+					if (args.length < 1) return reply ('oii ${pushname2}')
 					break
 					  if (args.length < 1) return reply('Cadê o texto, mano??')
                      if (args.length > 10) return reply('pelo menos 10 caracteres')
