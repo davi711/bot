@@ -284,7 +284,7 @@ async function starts() {
 					levelnol: '*error* 0 °-°',
 					error: {
 				stick: '⌜ 😶 ⌟ DEU ERRO TENTA AI DNV',
-				Iv: '⌜ 🙃 ⌟ Link inválido'
+				Iv: '⌜ 🙃 ⌟ Link inválido️'
 				},
 				only: {
 					group: '⌜ 👥 ⌟ ESTE COMANDO É EXCLUSIVO PARA GRUPOS',
