@@ -274,7 +274,6 @@ async function starts() {
 			const command = body.slice(1).trim().split(/ +/).shift().toLowerCase()
 			const args = body.trim().split(/ +/).slice(1)
 			const isCmd = body.startsWith(prefix)
-			pushname2 = frhan.contacts[nameReq] != undefined ? frhan.contacts[nameReq].vname || frhan.contacts[nameReq].notify : undefined
 
 			mess = {
 					wait: '⌜ 🙄 ⌟ AGUARDE...',
