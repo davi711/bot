@@ -57,14 +57,14 @@ const instagram = 'http://www.instagram.com/';
 const aktif = '08:00 - 22:00';
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
-            + 'FN:DAVI DONO PIROCÃO\n' // Nama kamu
+            + 'FN:Dark\n' // Nama kamu
             + 'ORG:Lexa;\n' // Nama bot
-            + 'TEL;type=CELL;type=VOICE;waid=553188514445:+55 318851-4445\n' //Nomor whatsapp kamu
+            + 'TEL;type=CELL;type=VOICE;waid=5522996215481:+55 2299621-5481\n' //Nomor whatsapp kamu
             + 'END:VCARD'
-prefix = '.'
+prefix = '.','!','#'
 blocked = []
 limitawal = '999999999'
-cr = 'É o Davi não é mesmo?'
+cr = '*Dark*'
 
 /*********** LOAD FILE ***********/
 const _leveling = JSON.parse(fs.readFileSync('./database/group/leveling.json'))
@@ -224,7 +224,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Olá @${num.split('@')[0]}\nBem vindo ao grupo ${mdata.subject}\n\nEspero que goste do grupo ❤️`
+				teks = `Olá @${num.split('@')[0]}\nBem vindo ao grupo *${mdata.subject}*\n\nEspero que goste do grupo ❤️`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -235,7 +235,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `SAIU @${num.split('@')[0]} PQ É HÉTERO`
+				teks = `Tchau @${num.split('@')[0]} Ja foi tarde 😂👋`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -276,35 +276,35 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-					wait: '⌜ 🙄 ⌟ AGUARDE...',
-					success: '️⌜ 😎 ⌟ SUSSESO',
-					levelon: '⌜ 😳 ⌟ LEVEL ATIVADO',
-					leveloff: '⌜ 😭 ⌟   ATIVA AI DNV PFV',
-					levelnoton: '⌜ 😐 ⌟ O LEVEL NÃO ESTÁ ATIVO',
+					wait: '❬❗❭ Espere',
+					success: '️❬ ✔ ❭ Sucesso 🖤',
+					levelon: '❬ ✔ ❭ *leveling* *ativado*',
+					leveloff: ' ❬ X ❭  *leveling* *desativado*',
+					levelnoton: '❬ X ❭ *leveling não ativado*',
 					levelnol: '*error* 0 °-°',
 					error: {
-				stick: '⌜ 😶 ⌟ DEU ERRO TENTA AI DNV',
-				Iv: '⌜ 🙃 ⌟ Link inválido️'
+				stick: '*Bem, falhe, tente novamente ^_^*',
+				Iv: '𝗠𝗮𝗮𝗳 𝗹𝗶𝗻𝗸 𝘁𝗶𝗱𝗮𝗸 𝘃𝗮𝗹𝗶𝗱☹️'
 				},
 				only: {
-					group: '⌜ 👥 ⌟ ESTE COMANDO É EXCLUSIVO PARA GRUPOS',
-					premium: '⌜ 🥋 ⌟  ESTE COMANDO É EXCLUSIVO PARA USUÁRIOS PREMIUNS',
-					mod: '⌜ 🤪 ⌟ ESTE COMANDO É EXCLUSIVO PARA USUÁRIOS MOD DO DAVI BOT',
-					benned: 'VOCÊ ESTÁ BANIDO CONTATE O DAVI PARA SER DESBANIDO',
-					ownerG: '⌜ 😡 ⌟ ESTE COMANDO É EXCLUSIVO PARA O DAVI',
-					ownerB: '⌜ 😡 ⌟ ESTE COMANDO É EXCLUSIVO PARA O DAVI',
+					group: '[❗] Este comando só pode ser usado em grupos! ❌',
+					premium: '[❗] ESTE PEDIDO É SO PARA *USUÁRIOS PREMIUMS*',
+					mod: '[❗] ESTE PEDIDO É ESPECÍFICO PARA USUARIO MOD DARK BOT*',
+					benned: 'Você para a banda, por favor, contate o proprietário para abrir sua banda',
+					ownerG: '[❗] Proprietário? Este é um recurso especial para o proprietário do bot ❌',
+					ownerB: '[❗] Proprietário? Este é um recurso especial para o proprietário do bot ❌',
 					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmã. Você não está registrado como amigo de Dark. Registre-se para fazer amizade com o bot Dark por meio, \n\nCommand : ${prefix}daftar nama|idade\nExemplo : ${prefix}daftar Dark|17\n\n──「 Dark BOT 」──`,
-					admin: '⌜ 😝 ⌟ ESTE COMANDO É EXCLUSIVO PARA ADMINISTRADORES DO GRUPO',
-					Badmin: '⌜ 😕 ⌟ O COMANDO SÓ PODE SER USADO QUANDO O BOT SE TORNA ADMINISTRADOR',
+					admin: '[❗] Este comando só pode ser usado por administradores de grupo! ❌',
+					Badmin: ' [❗] Este comando só pode ser usado quando o bot se torna administrador! ❌',
 				}
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["553188514445@s.whatsapp.net"] // replace this with your number
-			const mod = [ownerNumber,"553188514445@s.whatsapp.net"]//ubah nomor lo
-			const adminbotnumber = ["553188514445@s.whatsapp.net"]//ubah nomor lo
-			const frendsowner = ["553188514445@s.whatsapp.net"]//ubah nomor lo
-			const premium = ["553188514445@s.whatsapp.net","558296156440@s.whatsapp.net"]
+			const ownerNumber = ["5522996215481@s.whatsapp.net"] // replace this with your number
+			const mod = [ownerNumber,"5522996215481@s.whatsapp.net"]//ubah nomor lo
+			const adminbotnumber = ["5522996215481@s.whatsapp.net"]//ubah nomor lo
+			const frendsowner = ["5522996215481@s.whatsapp.net"]//ubah nomor lo
+			const premium = ["5522996215481@s.whatsapp.net","559784130980@s.whatsapp.net","557599941062@s.whatsapp.net","558598669655@s.whatsapp.net","5511949051934@s.whatsapp.net","554792091566@s.whatsapp.net","558699541889@s.whatsapp.net","559294313229@s.whatsapp.net","554298653614@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -327,7 +327,6 @@ async function starts() {
 			const ismod = mod.includes(sender)
 			const errorurl2 = 'https://i.ibb.co/dttZM8b/591530180aad.png'
 			const isadminbot = adminbotnumber.includes(sender)
-			pushname = index.contacts[nameReq] != undefined ? index.contacts[nameReq].vname || index.contacts[nameReq].notify : undefined
 			const isfrendsowner = frendsowner.includes(sender)
 			const isUrl = (url) => {
 			    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
