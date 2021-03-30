@@ -2770,6 +2770,12 @@ break
                    client.groupUpdateSubject(from, `${body.slice(9)}`)
                    client.sendMessage(from, 'Sucesso, alterou o nome do grupo', text, {quoted: mek})
                    break
+				case 'porcentagem':
+					exe = body.slice(13)
+					teks98 = exe.split("|")
+					teks99 = exe.split("|")
+					client.sendMessage(from, `Tu é *${teks98}* mesmo viu,.Olha aqui o quanto deu `, text, { quoted:mek })
+					break
 				case 'galaxtext':
 					if (args.length < 1) return reply('o que você quer tio')
 					teks = body.slice(12)
