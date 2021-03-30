@@ -2776,7 +2776,7 @@ break
 					teks99 = exe.split("|")
 					if (args.length < 1) return reply('Marque a pessoa')
 					var be = Math.floor(Math.random() * 101) + '%'
-					client.sendMessage(from, 'Tu é ${teks98} mesmo viu ${teks99}.Olha aqui o quanto deu `+be +', text, { quoted:mek })
+					client.sendMessage(from, 'Tu é ${teks98} mesmo viu ${teks99}.Olha aqui o quanto deu +be +', text, { quoted:mek })
 					break
 				case 'galaxtext':
 					if (args.length < 1) return reply('o que você quer tio')
