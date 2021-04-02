@@ -305,6 +305,7 @@ async function starts() {
 			const adminbotnumber = ["553188514445@s.whatsapp.net"]//ubah nomor lo
 			const frendsowner = ["553188514445@s.whatsapp.net"]//ubah nomor lo
 			const premium = ["553188514445@s.whatsapp.net"]
+			const banido = ["558881168559@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -3652,6 +3653,7 @@ break
 					})
 					break
 				case 'marcar':
+					if (!isBanido) return reply('Olá parece que você está banida de usar este comando.' ,text, { quoted: mek })
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
@@ -3664,6 +3666,7 @@ break
 					mentions(teks, members_id, true)
 					break
                 case 'marcar2':
+     	  	      if (!isBanido) return reply('Olá parece que você está banida de usar este comando.' ,text, { quoted: mek })
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -3674,6 +3677,7 @@ break
 					reply(teks)
 					break
                  case 'marcar3':
+                 if (!isBanido) return reply('Olá parece que você está banida de usar este comando.' ,text, { quoted: mek })
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
