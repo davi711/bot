@@ -3736,7 +3736,7 @@ break
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						buff = await client.downloadMediaMessage(encmedia)
 						for (let _ of groupMembers) {
-							client.sendMessage(_.jid, buff, image, {caption: `*「 BC GROUP 」*\n*Group* : ${groupName}\n\n${body.slice(6)}`})
+							client.sendMessage(_.jid, buff, image, {caption: `*「 TRANSMISSÃO DE AVISO」\nGRUPO: ${groupName}\n\n${body.slice(6)}`})
 						}
 						reply('')
 					} else {
