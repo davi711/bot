@@ -3705,7 +3705,25 @@ break
 						reply('Transmissão enviada com sucesso')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `「 TRANSMISSÃO DE AVISO 」\n\n${body.slice(4)}`)
+							sendMess(_.jid, `「 TRANSMISSÃO 」\n\n${body.slice(4)}`)
+						}
+						reply('Transmissão enviada com sucesso')
+					}
+					break
+				case 'tmaviso':
+					if (!isOwner) return reply('🤬 ESTE COMANDO SÓ PODE SER USADO PELO DAVI 🤬')
+					if (args.length < 1) return reply('.......')
+					anu = await client.chats.all()
+					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+						buff = await client.downloadMediaMessage(encmedia)
+						for (let _ of anu) {
+							client.sendMessage(_.jid, buff, image, {caption: `[ TRANSMISSÃO DE AVISO ]\n\n${body.slice(9)}`})
+						}
+						reply('Transmissão enviada com sucesso')
+					} else {
+						for (let _ of anu) {
+							sendMess(_.jid, `「 TRANSMISSÃO DE AVISO 」\n\n${body.slice(9)}`)
 						}
 						reply('Transmissão enviada com sucesso')
 					}
