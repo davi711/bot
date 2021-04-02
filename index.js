@@ -3666,7 +3666,7 @@ break
 					mentions(teks, members_id, true)
 					break
                 case 'marcar2':
-     	  	      if (!isBanido) return reply('Olá parece que você está banida de usar este comando.' ,text, { quoted: mek })
+					if (!isBanido) return reply('Olá parece que você está banida de usar este comando.' ,text, { quoted: mek })
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -3677,7 +3677,7 @@ break
 					reply(teks)
 					break
                  case 'marcar3':
-                 if (!isBanido) return reply('Olá parece que você está banida de usar este comando.' ,text, { quoted: mek })
+					if (!isBanido) return reply('Olá parece que você está banida de usar este comando.' ,text, { quoted: mek })
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
