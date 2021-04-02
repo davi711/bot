@@ -3713,7 +3713,6 @@ break
 				case 'tmgp':
 					client.updatePresence(from, Presence.composing) 
 					if (!isOwner) return reply(mess.only.ownerB)
-					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('.......')
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
