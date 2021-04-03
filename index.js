@@ -291,7 +291,7 @@ async function starts() {
 					premium: '⌜ 🥋 ⌟  ESTE COMANDO É EXCLUSIVO PARA USUÁRIOS PREMIUNS',
 					mod: '⌜ 🤪 ⌟ ESTE COMANDO É EXCLUSIVO PARA USUÁRIOS MOD DO DAVI BOT',
 					benned: 'VOCÊ ESTÁ BANIDO CONTATE O DAVI PARA SER DESBANIDO',
-					ownerG,: '⌜ 😡 ⌟ ESTE COMANDO É EXCLUSIVO PARA O DAVI',
+					ownerG: '⌜ 😡 ⌟ ESTE COMANDO É EXCLUSIVO PARA O DAVI',
 					ownerB: '⌜ 😡 ⌟ ESTE COMANDO É EXCLUSIVO PARA O DAVI',
 					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmã. Você não está registrado como amigo de Dark. Registre-se para fazer amizade com o bot Dark por meio, \n\nCommand : ${prefix}daftar nama|idade\nExemplo : ${prefix}daftar Dark|17\n\n──「 Dark BOT 」──`,
 					admin: '⌜ 😝 ⌟ ESTE COMANDO É EXCLUSIVO PARA ADMINISTRADORES DO GRUPO',
