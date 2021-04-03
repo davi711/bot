@@ -3654,7 +3654,7 @@ break
 					})
 					break
 				case 'marcar':
-					if (!isBanido) return reply(mess.only.benned)
+					if (!isBanido) return reply('Você está banido!' ,text, { quoted: mek })
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
@@ -3667,7 +3667,7 @@ break
 					mentions(teks, members_id, true)
 					break
                 case 'marcar2':
-					if (!isBanido) return reply(mess.only.benned)
+					if (!isBanido) return reply('Você está banido!' ,text, { quoted: mek })
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -3678,7 +3678,7 @@ break
 					reply(teks)
 					break
                  case 'marcar3':
-					if (!isBanido) return reply(mess.only.benned)
+					if (!isBanido) return reply('Você está banido!' ,text, { quoted: mek })
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
