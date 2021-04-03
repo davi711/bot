@@ -306,7 +306,7 @@ async function starts() {
 			const adminbotnumber = ["553188514445@s.whatsapp.net"]//ubah nomor lo
 			const frendsowner = ["553188514445@s.whatsapp.net"]//ubah nomor lo
 			const premium = ["553188514445@s.whatsapp.net"]
-			const banido = ["558881168559@s.whatsapp.net"]
+			const banido = ["12527322698@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -325,7 +325,6 @@ async function starts() {
 	    	const isAntiRacismo = isGroup ? antiracismo.includes(from) : false
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
-			const isBanido = banidoNumber.includes(sender)
 			const isPremium = premium.includes(sender)
 			const ismod = mod.includes(sender)
 			const errorurl2 = 'https://i.ibb.co/dttZM8b/591530180aad.png'
