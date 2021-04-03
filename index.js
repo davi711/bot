@@ -291,7 +291,7 @@ async function starts() {
 					premium: '⌜ 🥋 ⌟  ESTE COMANDO É EXCLUSIVO PARA USUÁRIOS PREMIUNS',
 					mod: '⌜ 🤪 ⌟ ESTE COMANDO É EXCLUSIVO PARA USUÁRIOS MOD DO DAVI BOT',
 					benned: 'VOCÊ ESTÁ BANIDO CONTATE O DAVI PARA SER DESBANIDO',
-					ownerG: '⌜ 😡 ⌟ ESTE COMANDO É EXCLUSIVO PARA O DAVI',
+					ownerG,: '⌜ 😡 ⌟ ESTE COMANDO É EXCLUSIVO PARA O DAVI',
 					ownerB: '⌜ 😡 ⌟ ESTE COMANDO É EXCLUSIVO PARA O DAVI',
 					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmã. Você não está registrado como amigo de Dark. Registre-se para fazer amizade com o bot Dark por meio, \n\nCommand : ${prefix}daftar nama|idade\nExemplo : ${prefix}daftar Dark|17\n\n──「 Dark BOT 」──`,
 					admin: '⌜ 😝 ⌟ ESTE COMANDO É EXCLUSIVO PARA ADMINISTRADORES DO GRUPO',
@@ -301,6 +301,7 @@ async function starts() {
 
 			const botNumber = client.user.jid
 			const ownerNumber = ["553188514445@s.whatsapp.net"] // replace this with your number
+			const banidoNumber = ["558881168559@s.whatsapp.net"]
 			const mod = [ownerNumber,"553188514445@s.whatsapp.net"]//ubah nomor lo
 			const adminbotnumber = ["553188514445@s.whatsapp.net"]//ubah nomor lo
 			const frendsowner = ["553188514445@s.whatsapp.net"]//ubah nomor lo
@@ -324,8 +325,8 @@ async function starts() {
 	    	const isAntiRacismo = isGroup ? antiracismo.includes(from) : false
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
+			const isBanido = banidoNumber.includes(sender)
 			const isPremium = premium.includes(sender)
-			const isBanido = banido.includes(sender)
 			const ismod = mod.includes(sender)
 			const errorurl2 = 'https://i.ibb.co/dttZM8b/591530180aad.png'
 			const isadminbot = adminbotnumber.includes(sender)
@@ -3653,7 +3654,7 @@ break
 					})
 					break
 				case 'marcar':
-					if (!isBanido) return reply('Olá parece que você está banida de usar este comando.' ,text, { quoted: mek })
+					if (!isBanido return reply(mess.only.benned)
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
@@ -3666,7 +3667,7 @@ break
 					mentions(teks, members_id, true)
 					break
                 case 'marcar2':
-					if (!isBanido) return reply('Olá parece que você está banida de usar este comando.' ,text, { quoted: mek })
+					if (!isBanido return reply(mess.only.benned)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -3677,7 +3678,7 @@ break
 					reply(teks)
 					break
                  case 'marcar3':
-					if (!isBanido) return reply('Olá parece que você está banida de usar este comando.' ,text, { quoted: mek })
+					if (!isBanido return reply(mess.only.benned)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
