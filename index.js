@@ -3129,8 +3129,7 @@ break
 					}
 				case 's': 
 				case 'stiker':
-				case 'sticker': 
-				if (isLimit(sender)) return reply(ind.limitend(pusname))
+				case 'sticker':
 				await limitAdd(sender)
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
