@@ -1807,14 +1807,6 @@ if (text.includes("placa"))
                     tujuh = fs.readFileSync('./assets/fazerdinheiro.mp3');
                     client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                     break 
-				case 'gemido1':
-                    tujuh = fs.readFileSync('./assets/gemido1.mp3');
-                    client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                    break 
-				case 'gemido2':
-                    tujuh = fs.readFileSync('./assets/gemido2.mp3');
-                    client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                    break 
 				case 'animecry':
 					cry = getRandom('.gif')
 					rano = getRandom('.webp')
@@ -1829,42 +1821,6 @@ if (text.includes("placa"))
 					})
 					await limitAdd(sender) 
 					break 
-case 'onich':
-tujuh = fs.readFileSync('./assets/sound7.mp3');
-client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'ola':
-tujuh = fs.readFileSync('./assets/oi.mp3');
-client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'bv':
-tujuh = fs.readFileSync('./assets/bv.mp3');
-client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'tchau':
-tujuh = fs.readFileSync('./assets/tchau.mp3');
-client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'bem':
-tujuh = fs.readFileSync('./assets/bem.mp3');
-client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'a':
-tujuh = fs.readFileSync('./assets/a.mp3');
-client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'fdp':
-tujuh = fs.readFileSync('./assets/fdp.mp3');
-client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'beat1':
-tujuh = fs.readFileSync('./assets/beat1.mp3');
-client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'glub':
-tujuh = fs.readFileSync('./assets/glub.mp3');
-client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
 		
 				case 'hinata':
 
