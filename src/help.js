@@ -12,8 +12,7 @@ const help = (prefix) => {
 │
 ├──🦊「 NOVIDADES 」🦊──
 │
-│🤬 ${prefix}tiktokeffect [ texto]
-│🤬 ${prefix}attp [ texto ]
+│
 │
 ├──🦊「 MENU 」🦊──
 │
@@ -26,7 +25,7 @@ const help = (prefix) => {
 │🤬 ${prefix}lolih [ on ]
 │🤬 ${prefix}nsfwloli [ off ]
 │🤬 ${prefix}url2img
-│🤬 ${prefix}play (nome da msc)
+│🤬 ${prefix}play [ nome da msc ]
 │🤬 ${prefix}leens [ na legenda ]
 │🤬 ${prefix}wait [ na legenda ]
 │🤬 ${prefix}setprefix
@@ -37,12 +36,11 @@ const help = (prefix) => {
 │🤬 ${prefix}spamcall
 │🤬 ${prefix}play (nome da msc)
 │🤬 ${prefix}simih [ 1/0 ]
-│🤬 ${prefix}tm [ texto ] (ele faz uma ™)
+│🤬 ${prefix}tm [ texto ]
 │🤬 ${prefix}bloqueados
 │🤬 ${prefix}bloquear [ @ ]
 │🤬 ${prefix}desbloquear [ @ ]
 │🤬 ${prefix}limpar
-│🤬 ${prefix}tm [  texto  ]
 │🤬 ${prefix}help1
 │🤬 ${prefix}dono
 │🤬 ${prefix}owner
@@ -60,14 +58,14 @@ const help = (prefix) => {
 │🤬 ${prefix}boanoite
 │🤬 ${prefix}bomdia
 │🤬 ${prefix}boatarde
-│🤬 ${prefix}mia [ aleatórias ]
-│🤬 ${prefix}rize [ aleatórias ]
-│🤬 ${prefix}minato [ aleatórias ]
-│🤬 ${prefix}boruto [ aleatórias ]
-│🤬 ${prefix}hinata [ aleatórias ]
-│🤬 ${prefix}sasuke [ aleatórias ]
-│🤬 ${prefix}sakura [ aleatórias ]
-│🤬 ${prefix}naruto [ aleatórias ]
+│🤬 ${prefix}mia
+│🤬 ${prefix}rize
+│🤬 ${prefix}minato
+│🤬 ${prefix}boruto
+│🤬 ${prefix}hinata
+│🤬 ${prefix}sasuke
+│🤬 ${prefix}sakura
+│🤬 ${prefix}naruto
 │🤬 ${prefix}meme   
 │🤬 ${prefix}lofi
 │🤬 ${prefix}malkova
@@ -83,22 +81,21 @@ const help = (prefix) => {
 │
 ├──🦊「 EM TESTE 」🦊──
 │
-│🤬 ${prefix}
-│🤬 ${prefix}
+│🤬 ${prefix}bug [ texto ]
 │
 ├──🦊「 PREMIUM 」🦊──
 │
 │🤬 ${prefix}dado
-│🤬 ${prefix}destrava [ premium ]
-│🤬 ${prefix}gpessoa [ premium ]
-│🤬 ${prefix}pack [ premium ]
-│🤬 ${prefix}chentai [ premium ]
+│🤬 ${prefix}destrava
+│🤬 ${prefix}gpessoa
+│🤬 ${prefix}pack
+│🤬 ${prefix}chentai
 │🤬 ${prefix}cekvip
 │🤬 ${prefix}premiumlist
 │🤬 ${prefix}delete
 │🤬 ${prefix}modapk
 │🤬 ${prefix}indo10
-│🤬 ${prefix}daftarvip [ para virar Premium ]
+│🤬 ${prefix}daftarvip
 │🤬 ${prefix}qrcode
 │🤬 ${prefix}chentai
 │🤬 ${prefix}gcpf
@@ -106,15 +103,15 @@ const help = (prefix) => {
 │🤬 ${prefix}pack
 │🤬 ${prefix}destrava
 │🤬 ${prefix}gpessoa
-│🤬 ${prefix}gbin [ premium ]
-│🤬 ${prefix}gcpf [ premium ]
+│🤬 ${prefix}gbin
+│🤬 ${prefix}gcpf
 │
 ├──🦊「 GRUPO 」🦊──
 │
 │🤬 ${prefix}attp [ texto ]
-│🤬${prefix}banir usuário [ @ ]
-│🤬${prefix}desbanir usuário [ @ ]
-│🤬 ${prefix}tm [  texto  ]
+│🤬 ${prefix}banir usuário [ @ ]
+│🤬 ${prefix}desbanir usuário [ @ ]
+│🤬 ${prefix}tm [ texto ]
 │🤬 ${prefix}sair
 │🤬 ${prefix}play (nome da msc)
 │🤬 ${prefix}setnome
@@ -134,12 +131,12 @@ const help = (prefix) => {
 │🤬 ${prefix}banirdogp [ @ ]
 │🤬 ${prefix}add [ @ ]
 │🤬 ${prefix}gay [ @ ]
-│🤬 ${prefix}tmgp [  texto  ]
-│🤬 ${prefix}tmgp2 [  texto  ]
-│🤬 ${prefix}notify [  texto  ]
+│🤬 ${prefix}tmgp
+│🤬 ${prefix}tmgp2
+│🤬 ${prefix}notify
 │🤬 ${prefix}fechargp
 │🤬 ${prefix}abrirgp
-│🤬 ${prefix}leveling [  on/off  ]
+│🤬 ${prefix}leveling [ on/off ]
 │🤬 ${prefix}level
 │🤬 ${prefix}add
 │🤬 ${prefix}promover
@@ -150,7 +147,7 @@ const help = (prefix) => {
 │🤬 ${prefix}marcar
 │🤬 ${prefix}marcar2
 │🤬 ${prefix}marcar3
-│🤬 ${prefix}bemvindo [  1/0  ]
+│🤬 ${prefix}bemvindo [ 1/0 ]
 │🤬 ${prefix}grupoinfo
 │🤬 ${prefix}bomdia
 │🤬 ${prefix}boatarde
@@ -163,14 +160,13 @@ const help = (prefix) => {
 │🤬 ${prefix}bug [ sua mensagem ]
 │🤬 ${prefix}clonar [ @ ]
 │🤬 ${prefix}dono
-│🤬 ${prefix}ping [ ver velocidade do bot ]
+│🤬 ${prefix}ping
 │🤬 ${prefix}termux
 │🤬 ${prefix}gay [ @ ]
 │🤬 ${prefix}wame
-│🤬 ${prefix}map (nome)
-│🤬 ${prefix}setppbot (marque uma img)
-│🤬 ${prefix}pinterest (nome)
-│🤬 ${prefix}desligar (so para o dono)
+│🤬 ${prefix}map [ cidade ]
+│🤬 ${prefix}setppbot [ marque a img ]
+│🤬 ${prefix}pinterest
 │🤬 ${prefix}timer
 │
 ├──🦊「 MAIS ALGUNS 」🦊──
@@ -193,22 +189,9 @@ const help = (prefix) => {
 │🤬 ${prefix}gay1
 │🤬 ${prefix}next
 │🤬 ${prefix}alerta
-│🤬 ${prefix}belle [ img aleatórias ]
+│🤬 ${prefix}belle
 │🤬 ${prefix}pronomeneu [ texto ]
 │🤬 ${prefix}hobby
-│
-├──🦊「 COMANDOS DE VOZ 」🦊──
-│
-│🤬 ${prefix}ola
-│🤬 ${prefix}bv
-│🤬 ${prefix}tchau
-│🤬 ${prefix}bem
-│🤬 ${prefix}fdp
-│🤬 ${prefix}onich
-│🤬 ${prefix}beat1
-│🤬 ${prefix}glub
-│🤬 ${prefix}gemido1
-│🤬 ${prefix}gemido2
 │
 ├──🦊「 COMANDOS DE MUSICA 」🦊──
 │
@@ -237,17 +220,6 @@ const help = (prefix) => {
 │🤬 ${prefix}setnomebot
 │🤬 ${prefix}meme
 │
-│
-├──🦊「 INTERATIVOS 」🦊──
-│
-├──NOTA »
-│Mandar a msg sem o prefixo
-├────────────────────
-│
-│🤬 oii
-│🤬 bv
-│🤬 canta ai bot
-│🤬 grita
 │
 ├──🦊「 𝗗𝗢𝗡𝗢 」🦊──
 │
