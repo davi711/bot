@@ -305,7 +305,6 @@ async function starts() {
 			const adminbotnumber = ["553188514445@s.whatsapp.net"]//ubah nomor lo
 			const frendsowner = ["553188514445@s.whatsapp.net"]//ubah nomor lo
 			const premium = ["553188514445@s.whatsapp.net"]
-			const banido = ["12527322698@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -1609,24 +1608,17 @@ if (text.includes("placa"))
 					if (!isGroupAdmins)return reply(mess.only.admin)
 					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
-                case 'travar':
+                case 'bug':
                      const pesan = body.slice(5)
-                      if (!isPremium) return reply(mess.only.premium)
-                      if (pesan.length > 5000) return client.sendMessage(from, 'ate 5k de caracteres', msgType.text, {quoted: mek})
+                      if (pesan.length > 1000) return client.sendMessage(from, 'maximo 1.000 caracteres', msgType.text, {quoted: mek})
                         var nomor = mek.participant
-                       const teks1 = `*[TRAVA🐊🚩]*\nTRAVADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
-                       const teks2 = `*[TRAVA🐊🚩]*\nTRAVADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
-                       const teks3 = `*[TRAVA🐊🚩]*\nTRAVADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
-                       const teks4 = `*[TRAVA🐊🚩]*\nTRAVADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
+                       const teks1 = `Bug reportado por: @${nomor.split("@s.whatsapp.net")[0]}\nGrupo: ${groupMetadata.subject}\nBug: ${pesan}`
                       var options = {
                          text: teks1,
-                         text: teks2,
-                         text: teks3,
-                         text: teks4,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    client.sendMessage('556192247994@s.whatsapp.net', options, text, {quoted: mek})
-                    reply('1 trava enviada')
+                    client.sendMessage('553188514445@s.whatsapp.net', options, text, {quoted: mek})
+                    reply('Bug reportado com susseso👍')
                     break
            case 'playmp3':
                 reply(mess.wait)
