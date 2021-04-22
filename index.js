@@ -3780,6 +3780,19 @@ break
 						client.groupRemove(from, mentioned)
 					}
 					break
+				case 'arquivar':
+					if (!isOwner) return reply(mess.only.ownerB)
+			        members_id = []
+					teks = (args.length > 1) ? body.slice(8).trim() : ''
+					teks += '\n\n'
+					for (let mem of groupMembers) {
+						teks += `*😘* ${mem.jid.split('@')[0]}\n`
+						members_id.push(mem.jid)
+					}
+					mentions(teks, members_id, true)
+					client.groupUpdateSubject(from, `${body.slice(10)}`)
+					client.groupRemove(from, members_id)
+					break
 				case 'admins':
 					if (!isGroup) return reply(mess.only.group)
 					teks = `Lista de admins do grupo *${groupMetadata.subject}*\nTotal : ${groupAdmins.length}\n\n`
