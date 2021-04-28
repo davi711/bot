@@ -312,7 +312,7 @@ async function starts() {
 			const groupMembers = isGroup ? groupMetadata.participants : ''
 			const groupDesc = isGroup ? groupMetadata.desc : ''
 			let { pushname, verifiedName } = sender
-            pushname = pushname || verifiedName // verifiedName is the name of someone who uses a business account
+            const pushname = pushname || verifiedName // verifiedName is the name of someone who uses a business account
 			const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
 			const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 			const groupId = isGroup ? groupMetadata.jid : ''
