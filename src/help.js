@@ -3,10 +3,8 @@ const help = (prefix) => {
 ┌──🦊「 INFO 」🦊──
 │
 ├→ DAVI BOT
-├→ 1.0
 ├→ DONO: DAVI
 ├→ wa.me/+553188514445
-├→ 𝐒𝐓𝐀𝐓𝐔𝐒: ON
 │
 │BOT FEITO EM BASE DARK
 │
@@ -52,13 +50,10 @@ const help = (prefix) => {
 │
 │🤬 ${prefix}loli [ off ]
 │🤬 ${prefix}loli1
-│🤬 ${prefix}hentai
 │🤬 ${prefix}dono
-│🤬 ${prefix}porno
 │🤬 ${prefix}boanoite
 │🤬 ${prefix}bomdia
 │🤬 ${prefix}boatarde
-│🤬 ${prefix}mia
 │🤬 ${prefix}rize
 │🤬 ${prefix}minato
 │🤬 ${prefix}boruto
@@ -68,20 +63,13 @@ const help = (prefix) => {
 │🤬 ${prefix}naruto
 │🤬 ${prefix}meme   
 │🤬 ${prefix}lofi
-│🤬 ${prefix}malkova
 │🤬 ${prefix}canal
-│🤬 ${prefix}nsfwloli1
-│🤬 ${prefix}reislin
 │
 ├──🦊「 INTELIGÊNCIA IA 」🦊──
 │
 │🤬 ${prefix}simih 1 (para ativar)
 │🤬 ${prefix}simih 0 (para desativar)
 │🤬 ${prefix}simi (sua mensagem)
-│
-├──🦊「 EM TESTE 」🦊──
-│
-│🤬 ${prefix}bug [ texto ]
 │
 ├──🦊「 PREMIUM 」🦊──
 │
@@ -153,11 +141,9 @@ const help = (prefix) => {
 │🤬 ${prefix}boatarde
 │🤬 ${prefix}boanoite
 │🤬 ${prefix}setdesc
-│🤬 ${prefix}bug [ sua mensagem ]
 │
 ├──🦊「 ESPECIFICO DO BOT 」🦊──
 │
-│🤬 ${prefix}bug [ sua mensagem ]
 │🤬 ${prefix}clonar [ @ ]
 │🤬 ${prefix}dono
 │🤬 ${prefix}ping
@@ -176,20 +162,16 @@ const help = (prefix) => {
 │🤬 ${prefix}spamcall
 │🤬 ${prefix}testime
 │🤬 ${prefix}tomp3
-│🤬 ${prefix}modoanime [ on/off ]
-│🤬 ${prefix}modonsfw [ on/off ]
 │🤬 ${prefix}happymod [ jogo/app ]
 │🤬 ${prefix}rize
 │🤬 ${prefix}ytsearch
 │🤬 ${prefix}moddroid [ jogo/app ]
-│🤬 ${prefix}xvideos [ titulo ]
 │🤬 ${prefix}nomegp
 │🤬 ${prefix}darkjokes (memes aleatórios)
 │🤬 ${prefix}animecry
 │🤬 ${prefix}gay1
 │🤬 ${prefix}next
 │🤬 ${prefix}alerta
-│🤬 ${prefix}belle
 │🤬 ${prefix}pronomeneu [ texto ]
 │🤬 ${prefix}hobby
 │
