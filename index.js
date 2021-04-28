@@ -263,6 +263,9 @@ async function starts() {
 			const content = JSON.stringify(mek.message)
 			const speed = require('performance-now');
 			const from = mek.key.remoteJid
+			const insom = from.endsWith('@g.us')
+			const nameReq = insom ? mek.participant : mek.key.remoteJid
+			pushname2 = client.contacts[nameReq] != undefined ? client.contacts[nameReq].vname || client.contacts[nameReq].notify : undefined
 			const type = Object.keys(mek.message)[0]
 			const apiKey = 'Your-Api-Key'
 			const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
@@ -311,8 +314,6 @@ async function starts() {
 			const groupName = isGroup ? groupMetadata.subject : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
 			const groupDesc = isGroup ? groupMetadata.desc : ''
-			let { pushname, verifiedName } = sender
-            const pushname = pushname || verifiedName // verifiedName is the name of someone who uses a business account
 			const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
 			const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 			const groupId = isGroup ? groupMetadata.jid : ''
@@ -939,63 +940,63 @@ if (text.includes("placa"))
 
 				encode64 = `${body.slice(10)}`
 				anu = await fetchJson(`https://api.i-tech.id/hash/bs64?key=${TechApi}&type=encode&string=${encode64}`, {method: 'get'})
-				frhan.sendMessage(from, `${anu.result}`, text, {quoted: mek})
+				client.sendMessage(from, `${anu.result}`, text, {quoted: mek})
 					await limitAdd(sender) 
 					break 
 				case 'decode64':
 
 				decode64 = `${body.slice(10)}`
 					anu = await fetchJson(`https://api.i-tech.id/hash/bs64?key=${TechApi}&type=decode&string=${decode64}`, {method: 'get'})
-					frhan.sendMessage(from, `${anu.result}`, text, {quoted: mek})
+					client.sendMessage(from, `${anu.result}`, text, {quoted: mek})
 					await limitAdd(sender) 
 					break  
 				case 'decode32':
 
 				decode32 = `${body.slice(10)}`
 					anu = await fetchJson(`https://api.i-tech.id/hash/bs32?key=${TechApi}&type=decode&string=${decode32}`, {method: 'get'})
-					frhan.sendMessage(from, `${anu.result}`, text, {quoted: mek})
+					client.sendMessage(from, `${anu.result}`, text, {quoted: mek})
 					await limitAdd(sender) 
 					break  
 				case 'encode32':
 
 				encode32 = `${body.slice(10)}`
 					anu = await fetchJson(`https://api.i-tech.id/hash/bs32?key=${TechApi}&type=encode&string=${encode32}`, {method: 'get'})
-					frhan.sendMessage(from, `${anu.result}`, text, {quoted: mek})
+					client.sendMessage(from, `${anu.result}`, text, {quoted: mek})
 					await limitAdd(sender) 
 					break  
 				case 'encbinary':
 
 				encbinary = `${body.slice(11)}`
 					anu = await fetchJson(`https://api.anoncybfakeplayer.com/api/binary/?encode=${encbinary}`, {method: 'get'})
-					frhan.sendMessage(from, `${anu.result}`, text, {quoted: mek})
+					client.sendMessage(from, `${anu.result}`, text, {quoted: mek})
 					await limitAdd(sender) 
 					break  
 				case 'decbinary':
 
 				decbin = `${body.slice(11)}`
 					anu = await fetchJson(`https://api.anoncybfakeplayer.com/api/binary/?decode=${decbin}`, {method: 'get'})
-					frhan.sendMessage(from, `${anu.result}`, text, {quoted: mek})
+					client.sendMessage(from, `${anu.result}`, text, {quoted: mek})
 					await limitAdd(sender) 
 					break  
 				case 'encoctal':
 
 				encoc = `${body.slice(10)}`
 					anu = await fetchJson(`https://api.anoncybfakeplayer.com/api/octal/?encode=${encoc}`, {method: 'get'})
-					frhan.sendMessage(from, `${anu.result}`, text, {quoted: mek})
+					client.sendMessage(from, `${anu.result}`, text, {quoted: mek})
 					await limitAdd(sender)
 					break  
 				case 'decoctal':
 
 				decoc = `${body.slice(10)}`
 					anu = await fetchJson(`https://api.anoncybfakeplayer.com/api/octal/?decode=${decoc}`, {method: 'get'})
-					frhan.sendMessage(from, `${anu.result}`, text, {quoted: mek})
+					client.sendMessage(from, `${anu.result}`, text, {quoted: mek})
 					await limitAdd(sender) 
 					break  
 				case 'becrypt':
 
 				becry = `${body.slice(10)}`
 				anu = await fetchJson(`https://api.i-tech.id/hash/bcrypt?key=${TechApi}&string=${becry}`, {method: 'get'})
-				frhan.sendMessage(from, `${anu.result}`, text, {quoted: mek})
+				client.sendMessage(from, `${anu.result}`, text, {quoted: mek})
 				await limitAdd(sender) 
 				break 
 					case 'hashidentifier':
@@ -1003,7 +1004,7 @@ if (text.includes("placa"))
 					  hash = `${body.slice(16)}`
 					  anu = await fetchJson(`https://freerestapi.herokuapp.com/api/v1/hash-identifier?hash=${hash}`)
 					  hasilhash = `Tipe: *${anu.hash_type}*\nChar Tipe: *${anu.char_type}*`
-					  frhan.sendMessage(from, hasilhash, text, {quoted: mek})
+					  client.sendMessage(from, hasilhash, text, {quoted: mek})
 					  await limitAdd(sender)
 					  break 
                 case 'tahta':
@@ -1123,8 +1124,8 @@ if (text.includes("placa"))
                 bufferddd = await getBuffer('https://raw.githubusercontent.com/FarhanXCode7/termux-bot-wa/main/src/glitchtext.png')
                  reply(mess.wait)
                 buff = await getBuffer(anu.result)
-                frhan.sendMessage(from, bufferddd, image, {quoted: mek, caption: sck})
-                frhan.sendMessage(from, buff, video, {mimetype: 'video/mp4', filename: `${anu.format}.mp4`, quoted: mek})
+                client.sendMessage(from, bufferddd, image, {quoted: mek, caption: sck})
+                client.sendMessage(from, buff, video, {mimetype: 'video/mp4', filename: `${anu.format}.mp4`, quoted: mek})
                 await limitAdd(sender) 
                 break  
 				case 'party':
