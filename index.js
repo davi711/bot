@@ -2254,7 +2254,7 @@ break
 					break
 				case 'testepnome2':
 					if (!isOwner) return reply('🤬 ESTE COMANDO SÓ PODE SER USADO PELO DAVI 🤬')
-					if (args.length < 1) return reply ('oii ${pushname2}')
+					if (args.length < 1) return reply ('oii ${pushname}2')
 					break
 					  if (args.length < 1) return reply('Cadê o texto, mano??')
                      if (args.length > 10) return reply('pelo menos 10 caracteres')
