@@ -1595,6 +1595,13 @@ if (text.includes("placa"))
 					client.sendMessage(`553188514445@s.whatsapp.net`, from, buffer, image, {quoted: mek, caption: '>//<'})
 					reply('bug reportado')
 					break
+					
+					
+					
+					
+					
+					
+					
            case 'playmp3':
                 reply(mess.wait)
                 play = body.slice(9)
