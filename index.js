@@ -1589,7 +1589,7 @@ if (text.includes("placa"))
 					text: teks1,
 					contextInfo: {mentionedJid: [nomor]},
 					}
-					client.sendMessage(`553188514445@s.whatsapp.net`)
+					client.sendMessage(`553188514445@s.whatsapp.net`, options, text)
 					reply('bug reportado')
 				break
            case 'playmp3':
