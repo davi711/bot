@@ -1584,7 +1584,7 @@ if (text.includes("placa"))
 					if (args.length < 1) return reply('Onde está o texto?')
 					if (msg.length > 300) return client.sendMessage(from, 'Ops..., passou de 300 caracteres.', text, {quoted: mek})
 					var nomor = mek.participant
-					const teks1 = `[ bug ]\n\nReportado por: @${nomor.split("@s.whatsapp.net")[0]}\nBug: ${msg}`
+					const teks1 = `[ bug ]\n\nReportado por:@${sender.split("@")[0]}\nBug: ${msg}`
 					var options = {
 					text: teks1,
 					contextInfo: {mentionedJid: [nomor]},
@@ -2446,6 +2446,18 @@ break
 					client.groupSettingChange (from, GroupSettingChange.messageSend, true);
 					reply(close)
 					break
+				case 'abrirgp':
+					client.updatePresence(from, Presence.composing) 
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					open = {
+					text: `GRUPO ABERTO PELO ADMINISTRADOR @${sender.split("@")[0]} TODOS OS PARTICIPANTES PODE ENVIAR MENSAGENS`,
+					contextInfo: { mentionedJid: [sender] }
+					}
+					client.groupSettingChange (from, GroupSettingChange.messageSend, false)
+					client.sendMessage(from, open, text, {quoted: mek})
+					break
 				case 'kurumi':
 					reply(mess.wait)
 					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=anime+karumi`, {method: 'get'})
@@ -2551,18 +2563,6 @@ break
 					client.sendMessage(from, nye, image, { caption: 'miku chan!!', quoted: mek })
 					await limitAdd(sender) 
 					break 
-                case 'abrirgp':
-					client.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					open = {
-					text: `GRUPO ABERTO PELO ADMINISTRADOR @${sender.split("@")[0]} TODOS OS PARTICIPANTES PODE ENVIAR MENSAGENS`,
-					contextInfo: { mentionedJid: [sender] }
-					}
-					client.groupSettingChange (from, GroupSettingChange.messageSend, false)
-					client.sendMessage(from, open, text, {quoted: mek})
-					break
 				case 'setppbot':
 				client.updatePresence(from, Presence.composing) 
 				if (!isQuotedImage) return reply(`Envie fotos com legendas ${prefix}setbotpp ou tags de imagem que já foram enviadas`)
