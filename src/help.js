@@ -10,7 +10,7 @@ const help = (prefix) => {
 │
 ├──🦊「 NOVIDADES 」🦊──
 │
-│
+│🤬 ${prefix}reportar
 │
 ├──🦊「 MENU 」🦊──
 │
