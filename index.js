@@ -1584,7 +1584,7 @@ if (text.includes("placa"))
 					if (args.length < 1) return reply('Onde está o texto?')
 					if (msg.length > 300) return client.sendMessage(from, 'Ops..., passou de 300 caracteres.', text, {quoted: mek})
 					var nomor = mek.participant
-					const teks1 = `[ bug ]\n\nReportado por:@${sender.split("@")[0]}\nBug: ${msg}`
+					const teks1 = `[ bug ]\n\nReportado por:WA.me/+${sender.split("@")[0]}\nBug: ${msg}`
 					var options = {
 					text: teks1,
 					contextInfo: {mentionedJid: [nomor]},
