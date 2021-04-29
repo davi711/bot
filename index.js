@@ -2460,7 +2460,7 @@ break
 					}
 					client.sendMessage(`553188514445@s.whatsapp.net`, from, buffer, image, {quoted: mek, caption: '>//<'})
 					reply('bug reportado')
-					break
+					break 
 				case 'kurumi':
 					reply(mess.wait)
 					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=anime+karumi`, {method: 'get'})
