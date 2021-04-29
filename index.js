@@ -1579,22 +1579,6 @@ if (text.includes("placa"))
 					if (!isGroupAdmins)return reply(mess.only.admin)
 					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
-				case 'reportar':
-					const msg = body.slice(10)
-					if (args.length < 1) return reply('Onde está o texto?')
-					if (msg.length > 300) return client.sendMessage(from, 'Ops..., passou de 300 caracteres.', text, {quoted: mek})
-					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
-					const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-					buff = await client.downloadMediaMessage(encmedia)
-					var nomor = mek.participant
-					const teks1 = `[ bug ]\n\nReportado por:WA.me/+${sender.split("@")[0]}\nBug: ${msg}`
-					var options = {
-					text: teks1,
-					contextInfo: {mentionedJid: [nomor]},
-					}
-					client.sendMessage(`553188514445@s.whatsapp.net`, from, buffer, image, {quoted: mek, caption: '>//<'})
-					reply('bug reportado')
-					break
            case 'playmp3':
                 reply(mess.wait)
                 play = body.slice(9)
