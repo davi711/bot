@@ -1579,18 +1579,19 @@ if (text.includes("placa"))
 					if (!isGroupAdmins)return reply(mess.only.admin)
 					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
-                case 'bug':
-                     const pesan = body.slice(5)
-                      if (pesan.length > 1000) return client.sendMessage(from, 'maximo 1.000 caracteres', msgType.text, {quoted: mek})
-                        var nomor = mek.participant
-                       const teks1 = `Bug reportado por: @${nomor.split("@s.whatsapp.net")[0]}\nGrupo: ${groupMetadata.subject}\nBug: ${pesan}`
-                      var options = {
-                         text: teks1,
-                         contextInfo: {mentionedJid: [nomor]},
-                     }
-                    client.sendMessage('553188514445@s.whatsapp.net', options, text, {quoted: mek})
-                    reply('Bug reportado com susseso👍')
-                    break
+				case 'reportar':
+					const msg = body.slice(10)
+					if (args.length < 1) return reply('Onde está o texto?')
+					if (msg.length > 300) return client.sendMessage(from, 'Ops..., passou de 300 caracteres.', text, {quoted: mek})
+					var nomor = mek.participant
+					const teks1 = `[ bug ]\n\nReportado por: @${nomor.split("@s.whatsapp.net")[0]}\nBug: ${msg}`
+					var options = {
+					text: teks1,
+					contextInfo: {mentionedJid: [nomor]},
+					}
+					client.sendMessage(`553188514445@s.whatsapp.net`, options, text, {quoted: mek})
+					reply('bug reportado')
+				break
            case 'playmp3':
                 reply(mess.wait)
                 play = body.slice(9)
