@@ -3656,6 +3656,20 @@ break
 						fs.unlinkSync(ran)
 					})
 					break
+				case 'tovideo':
+					if (!isQuotedSticker) return reply('{ ❗ } *Marque a figurinha*')
+					reply(mess.wait)
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await davi.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.mp4')
+					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('erro')
+						buffer = fs.readFileSync(ran)
+						davi.sendMessage(from, buffer, video, {quoted: mek, caption: '.'})
+						fs.unlinkSync(ran)
+					})
+					break
 				case 'simi':
 					if (args.length < 1) return reply('Onde está o texto, hum?')
 					teks = body.slice(5)
