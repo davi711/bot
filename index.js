@@ -46,6 +46,7 @@ const lolis = require('lolis.life')
 const loli = new lolis()
 const welkom = JSON.parse(fs.readFileSync('./src/welkom.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
+const setting = JSON.parse(fs.readFileSync('./database/json/atalhos.json'))
 /*const { xp } = require('./database/menu/xp')
 const { limit } = require('./database/menu/limit*/
 const apivhtear = 'apivhtear';
@@ -60,7 +61,13 @@ const vcard = 'BEGIN:VCARD\n'
             + 'ORG:Lexa;\n' // Nama bot
             + 'TEL;type=CELL;type=VOICE;waid=553188514445:+55 318851-4445\n' //Nomor whatsapp kamu
             + 'END:VCARD'
-prefix = '.'
+/***********ATALHOS***********/
+
+prefix = atalhos.prefixo
+nome = atalhos.nome
+davinum = atalhos.davinum
+
+
 blocked = []
 limitawal = '999999999'
 cr = '*Dark*'
@@ -299,11 +306,11 @@ async function starts() {
 			}
 
 			const botNumber = davi.user.jid
-			const ownerNumber = ["553188514445@s.whatsapp.net"] // replace this with your number
-			const mod = [ownerNumber,"553188514445@s.whatsapp.net"]//ubah nomor lo
-			const adminbotnumber = ["553188514445@s.whatsapp.net"]//ubah nomor lo
-			const frendsowner = ["553188514445@s.whatsapp.net"]//ubah nomor lo
-			const premium = ["553188514445@s.whatsapp.net"]
+			const ownerNumber = ["${davinum}@s.whatsapp.net"] // replace this with your number
+			const mod = [ownerNumber,"${davinum}@s.whatsapp.net"]//ubah nomor lo
+			const adminbotnumber = ["${davinum}@s.whatsapp.net"]//ubah nomor lo
+			const frendsowner = ["${davinum}@s.whatsapp.net"]//ubah nomor lo
+			const premium = ["${davinum}@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await davi.groupMetadata(from) : ''
@@ -701,6 +708,15 @@ if (text.includes("placa"))
 				case 'testepmenu':
 					davi.sendMessage(from, help(prefix), text)
 					break
+		/*************COMANDOS PARA MODDERS************/
+				case 'base':
+					base = body.slice(6)
+					if (args.length < 1) return reply('Onde está o texto, irmão?')
+					if (base.length > 8) return davi.sendMessage(from, 'Ops..., passou de 8 caracteres, mande ${prefix}bases para ver as bases disponíveis', text, {quoted: mek})
+					doc = fs.readFileSync(`./bases/${base}.zip`)
+					davi.sendMessage(from, doc, document, {quoted :mek})
+					break
+				/******************/
 				case 'help1':
 				case 'menu1':
 					davi.sendMessage(from, help1(prefix), text)
