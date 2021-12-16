@@ -360,7 +360,7 @@ async function starts() {
                 addLevelingXp(sender, amountXp)
                     addLevelingLevel(sender, 1)
                     await reply(`*「 LEVEL UP 」*\n\n➸ *Nome*: ${sender}\n➸ *XP*: ${getLevelingXp(sender)}\n➸ *Level*: ${getLevel} -> ${getLevelingLevel(sender)}\n\nParabéns!!  🎉🎉`)
-                }
+                
             } catch (err) {
                 console.error(err)
             }
