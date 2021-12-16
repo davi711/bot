@@ -358,7 +358,6 @@ async function starts() {
                 const requiredXp = 10000 * (Math.pow(2, currentLevel) - 1)
                 const getLevel = getLevelingLevel(sender)
                 addLevelingXp(sender, amountXp)
-                if (requiredXp <= getLevelingXp(sender)) {
                     addLevelingLevel(sender, 1)
                     await reply(`*「 LEVEL UP 」*\n\n➸ *Nome*: ${sender}\n➸ *XP*: ${getLevelingXp(sender)}\n➸ *Level*: ${getLevel} -> ${getLevelingLevel(sender)}\n\nParabéns!!  🎉🎉`)
                 }
