@@ -202,6 +202,8 @@ function kyun(seconds){
 
 async function starts() {
 	const davi = new WAConnection()
+	//WWEB
+client version = [2, 2119,6]
 	davi.logger.level = 'warn'
 	console.log(banner.string)
 	davi.on('qr', () => {
